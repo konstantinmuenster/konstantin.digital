@@ -2,24 +2,38 @@
   "name": "konstantin.digital",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Konstantin Münster",
+    "email": "mail@konstantin.digital",
+    "url": "https://konstantin.digital"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/(*.js|*.ts|*.yml|*.tsx|*.md|*.json)\""
   },
   "dependencies": {
+    "next": "13.4.9",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@kmuenster/prettier-config": "^1.0.1",
     "@types/node": "20.4.0",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
-    "next": "13.4.9",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.3.0",
     "postcss": "8.4.25",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6"
-  }
+  },
+  "packageManager": "yarn@1.22.19",
+  "prettier": "@kmuenster/prettier-config"
 }
