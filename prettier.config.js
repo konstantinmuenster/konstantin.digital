@@ -1,6 +1,8 @@
-import prettierConfig from '@kmuenster/prettier-config';
+const prettierConfig = require("@kmuenster/prettier-config");
+const prettierTailwind = require("prettier-plugin-tailwindcss");
 
 module.exports = {
   ...prettierConfig,
-  tailwindFunctions: ['clsx'],
+  plugins: [prettierTailwind],
+  tailwindFunctions: ["clsx"],
 };
