@@ -7,8 +7,7 @@ const button = tv({
   base: 'rounded-full px-[20px] py-[10px]',
   variants: {
     variant: {
-      accent: 'bg-blue-500 text-white',
-      primary: 'bg-black text-white',
+      primary: 'bg-black text-white dark:bg-white dark:text-black',
       secondary: 'bg-purple-500 text-white',
       text: 'group relative rounded-md bg-transparent p-[10px] text-black',
     },

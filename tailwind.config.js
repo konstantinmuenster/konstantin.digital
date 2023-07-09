@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   future: {
     hoverOnlyWhenSupported: true,
   },
@@ -15,7 +16,10 @@ module.exports = {
       violet: '#CEAFFA',
       mint: '#A3E8D3',
       sun: '#F9DF78',
-      black: '#000000',
+      black: {
+        DEFAULT: '#000000',
+        100: '#0D0D0D',
+      },
       white: {
         DEFAULT: '#FFFFFF',
         100: '#FFFDFA',

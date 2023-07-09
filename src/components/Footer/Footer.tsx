@@ -7,7 +7,7 @@ const year = new Date().getFullYear();
 
 export const Footer = () => {
   return (
-    <footer className="fixed inset-x-0 bottom-0 bg-black">
+    <footer className="border-t-2 border-transparent bg-black dark:border-white/50">
       <div className="px-container mx-auto flex max-w-container flex-row items-start justify-between gap-12 pb-32 pt-16">
         <div className="flex flex-col">
           <Logo iconColor="white" textHidden />

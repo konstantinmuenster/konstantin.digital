@@ -1,8 +1,8 @@
 @tailwind base;
 
 @layer base {
-  html {
-    @apply motion-safe:scroll-smooth;
+  body {
+    @apply bg-white text-black motion-safe:scroll-smooth dark:bg-black dark:text-white;
   }
   a:not([role='button']):not(.a-reset) {
     @apply border-b border-current font-medium opacity-80 hover:opacity-100;

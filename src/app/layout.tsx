@@ -5,11 +5,16 @@ import './globals.css';
 import { getFontConfig } from '@/assets/fonts/fonts.config';
 const { accent, sans } = getFontConfig();
 
+import { Providers } from './providers';
+
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en" className={`${accent.variable} ${sans.variable}`}>
-      <body>{children}</body>
-    </html>
+        <html lang="en" className={`${accent.variable} ${sans.variable}`} suppressHydrationWarning>
+        <head />
+        <body>
+          <Providers>{children}</Providers>
+        </body>
+      </html>
   );
 };
 
