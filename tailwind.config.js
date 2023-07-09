@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,6 +10,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      current: 'currentColor',
       transparent: 'transparent',
       violet: '#CEAFFA',
       mint: '#A3E8D3',
@@ -24,7 +28,7 @@ module.exports = {
     },
     extend: {
       maxWidth: {
-        container: '85rem',
+        container: '75rem',
       },
     },
   },

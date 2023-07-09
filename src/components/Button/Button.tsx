@@ -55,7 +55,11 @@ export const Button: FC<ButtonProps> = props => {
   if (props.as === 'a') {
     const { size, variant, className, ...rest } = props;
     return (
-      <Link className={button({ size, variant, className })} {...rest}>
+      <Link
+        role="button"
+        className={button({ size, variant, className })}
+        {...rest}
+      >
         {combinedChildren}
       </Link>
     );

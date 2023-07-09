@@ -1,4 +1,14 @@
 @tailwind base;
+
+@layer base {
+  html {
+    @apply motion-safe:scroll-smooth;
+  }
+  a:not([role='button']):not(.a-reset) {
+    @apply border-b border-current font-medium opacity-80 hover:opacity-100;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 
