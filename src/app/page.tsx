@@ -9,16 +9,12 @@ const Home = () => {
       <Header />
       <main className="px-container mx-auto max-w-container flex-1 py-8">
         <div className="relative mb-16">
-          <div className="relative mx-auto flex h-[calc(100vh-15rem)] max-h-[600px] max-w-2xl flex-col items-center justify-center">
-            <h1 className="text-center">
-              <span className="block font-accent text-7xl font-bold text-violet">
-                Writing code,
-              </span>
-              <span className="block font-accent text-7xl font-bold">
-                thinking product.
-              </span>
+          <div className="relative mx-auto flex max-w-2xl flex-col items-center justify-center lg:h-[calc(100vh-15rem)] lg:max-h-[600px]">
+            <h1 className="text-center font-accent text-6xl font-bold md:text-7xl">
+              <span className="block text-violet">Writing code,</span>
+              <span className="block">thinking product.</span>
             </h1>
-            <p className="my-5 text-center text-xl">
+            <p className="my-5 text-center text-lg md:text-xl">
               I help individuals and companies build better web applications.
               Available for freelance work in Hamburg or remote.
             </p>
@@ -28,7 +24,7 @@ const Home = () => {
               </Label>
             </div>
           </div>
-          <ThemeToggle className="absolute bottom-0 left-0" />
+          <ThemeToggle className="absolute -bottom-10 left-0 md:bottom-0" />
         </div>
       </main>
       <Footer />
