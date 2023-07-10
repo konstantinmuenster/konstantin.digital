@@ -29,7 +29,7 @@ export const ThemeToggle: FC<ThemeToggleProps> = ({ className }) => {
           checked={isDarkMode}
           onChange={() => setTheme(isDarkMode ? 'light' : 'dark')}
           className={clsx(
-            'flex w-[76px] cursor-pointer items-center rounded-full bg-black px-[6px] py-[5px] transition dark:bg-black-100',
+            'focus-default flex w-[76px] cursor-pointer items-center rounded-full bg-black px-[6px] py-[5px] transition dark:bg-black-100',
             className
           )}
         >

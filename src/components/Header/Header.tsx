@@ -3,6 +3,7 @@
 import { ComponentProps, FC } from 'react';
 import { Menu } from 'lucide-react';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 import { navigation } from '@/config/navigation.config';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
@@ -15,7 +16,9 @@ import { SlideOver } from '../Slideover';
 export const Header = () => {
   return (
     <header className="px-container mx-auto flex min-h-[calc(44px+2.5rem)] max-w-container justify-between gap-8 py-5">
-      <Logo iconRotated textHidden />
+      <Link href="/" className="a-reset focus-default rounded-md">
+        <Logo iconRotated textHidden />
+      </Link>
       {/* DESKTOP */}
       <div className="hidden md:block">
         <NavigationItems className="flex items-center gap-8 lg:gap-12" />

@@ -6,7 +6,7 @@ import { VariantProps, tv } from 'tailwind-variants';
 import { isInternal } from '@/utils/isInternal';
 
 const button = tv({
-  base: 'inline-block rounded-full px-[20px] py-[10px]',
+  base: 'focus-default inline-block rounded-full px-[20px] py-[10px]',
   variants: {
     variant: {
       primary: 'bg-black text-white dark:bg-white dark:text-black',

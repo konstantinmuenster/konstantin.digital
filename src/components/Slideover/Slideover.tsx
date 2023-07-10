@@ -14,7 +14,11 @@ export const SlideOver: FC<SlideOverProps> = ({ children, title, Icon }) => {
 
   return (
     <>
-      <button type="button" onClick={() => setOpen(true)} className="p-1">
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="focus-default rounded-md p-1"
+      >
         <span className="sr-only">Open panel</span>
         <Icon size={32} />
       </button>
@@ -61,7 +65,7 @@ export const SlideOver: FC<SlideOverProps> = ({ children, title, Icon }) => {
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
-                              className="rounded-md bg-white text-black/50 hover:text-black"
+                              className="focus-default rounded-md bg-white text-black/50 hover:text-black"
                               onClick={() => setOpen(false)}
                             >
                               <span className="sr-only">Close panel</span>
