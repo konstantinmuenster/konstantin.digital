@@ -1,10 +1,12 @@
 import { useMemo, type ComponentProps, type FC, type ReactNode } from 'react';
 
-import Link, { LinkProps } from 'next/link';
+import Link, { LinkProps as NextLinkProps } from 'next/link';
 import { VariantProps, tv } from 'tailwind-variants';
 
+import { isInternal } from '@/utils/isInternal';
+
 const button = tv({
-  base: 'rounded-full px-[20px] py-[10px]',
+  base: 'inline-block rounded-full px-[20px] py-[10px]',
   variants: {
     variant: {
       primary: 'bg-black text-white dark:bg-white dark:text-black',
@@ -29,7 +31,8 @@ type CommonButtonProps = ButtonVariants & {
   children: ReactNode;
 };
 
-type LinkButtonProps = { as: 'a' } & CommonButtonProps & Omit<LinkProps, 'as'>;
+type LinkButtonProps = { as: 'a' } & CommonButtonProps & ComponentProps<'a'>;
+
 type ActionButtonProps = { as: 'button' } & CommonButtonProps &
   ComponentProps<'button'>;
 
@@ -51,21 +54,36 @@ export const Button: FC<ButtonProps> = props => {
     );
   }, [children, variant]);
 
-  if (props.as === 'a') {
-    const { size, variant, className, ...rest } = props;
+  const isInternalLink = props.as === 'a' && isInternal(props.href);
+
+  if (props.as === 'a' && isInternalLink) {
+    const { size, variant, className, as, ...rest } = props;
     return (
       <Link
         role="button"
         className={button({ size, variant, className })}
-        {...rest}
+        {...(rest as NextLinkProps)}
       >
         {combinedChildren}
       </Link>
     );
   }
 
+  if (props.as === 'a' && !isInternalLink) {
+    const { size, variant, className, as, ...rest } = props;
+    return (
+      <a
+        role="button"
+        className={button({ size, variant, className })}
+        {...rest}
+      >
+        {combinedChildren}
+      </a>
+    );
+  }
+
   if (props.as === 'button') {
-    const { size, variant, className, ...rest } = props;
+    const { size, variant, className, as, ...rest } = props;
     return (
       <button className={button({ size, variant, className })} {...rest}>
         {combinedChildren}
