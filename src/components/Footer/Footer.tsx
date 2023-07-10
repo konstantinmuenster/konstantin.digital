@@ -8,7 +8,7 @@ const year = new Date().getFullYear();
 export const Footer = () => {
   return (
     <footer className="border-t-2 border-transparent bg-black dark:border-white/50">
-      <div className="px-container mx-auto flex max-w-container flex-row items-start justify-between gap-12 pb-32 pt-16">
+      <div className="px-container mx-auto flex max-w-container flex-col-reverse gap-y-20 md:flex-row items-start justify-between gap-x-12 pb-32 pt-16">
         <div className="flex flex-col">
           <Logo iconColor="white" textHidden />
           <span className="mt-3 block text-sm text-white">
@@ -19,8 +19,8 @@ export const Footer = () => {
             This page visit emitted <CarbonFootprint />.
           </span>
         </div>
-        <div className="flex flex-row gap-14 text-sm text-white">
-          <div className="flex min-w-[200px] flex-col gap-3">
+        <div className="flex flex-row flex-wrap gap-y-10 gap-x-14 text-sm text-white">
+          <div className="flex min-w-[110px] sm:min-w-[160px] lg:min-w-[200px] flex-col gap-3">
             <span className="font-medium">Navigation</span>
             <nav className="flex flex-col gap-3">
               {navigation.map(({ name, href }) => {
@@ -32,7 +32,7 @@ export const Footer = () => {
               })}
             </nav>
           </div>
-          <div className="flex min-w-[200px] flex-col gap-3">
+          <div className="flex min-w-[110px] sm:min-w-[160px] lg:min-w-[200px] flex-col gap-3">
             <span className="font-medium">Contact</span>
             <nav className="flex flex-col gap-3">
               {socials.map(({ name, href }) => {
