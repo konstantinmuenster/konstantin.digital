@@ -58,14 +58,14 @@ export const SlideOver: FC<SlideOverProps> = ({ children, title, Icon }) => {
                           )}
                         >
                           {title && (
-                            <Dialog.Title className="text-base font-semibold leading-6 text-black">
+                            <Dialog.Title className="text-base font-semibold leading-6">
                               {title}
                             </Dialog.Title>
                           )}
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
-                              className="focus-default rounded-md bg-white text-black/50 hover:text-black"
+                              className="focus-default rounded-md bg-white opacity-50 transition-opacity hover:opacity-100"
                               onClick={() => setOpen(false)}
                             >
                               <span className="sr-only">Close panel</span>

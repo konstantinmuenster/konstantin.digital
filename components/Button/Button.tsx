@@ -11,7 +11,7 @@ const button = tv({
     variant: {
       primary: 'bg-black text-white dark:bg-white dark:text-black',
       secondary: 'bg-purple-500 text-white',
-      text: 'group relative rounded-md bg-transparent p-[10px] text-black',
+      text: 'group relative rounded-md bg-transparent p-[10px] text-black dark:text-white',
     },
     size: {
       sm: 'text-base font-normal',
@@ -62,7 +62,7 @@ export const Button: FC<ButtonProps> = props => {
       <Link
         role="button"
         className={button({ size, variant, className })}
-        {...(rest as NextLinkProps)}
+        {...(rest as NextLinkProps<{}>)}
       >
         {combinedChildren}
       </Link>

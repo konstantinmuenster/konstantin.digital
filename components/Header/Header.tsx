@@ -22,8 +22,8 @@ export const Header = () => {
       {/* DESKTOP */}
       <div className="hidden md:block">
         <NavigationItems className="flex items-center gap-8 lg:gap-12" />
-        <FixedCallToActionButton />
       </div>
+      <FixedCallToActionButton className="hidden md:block" />
       {/* MOBILE */}
       <div className="block md:hidden">
         <SlideOver Icon={Menu}>
@@ -37,7 +37,7 @@ export const Header = () => {
 const NavigationItems: FC<{ className?: string }> = props => {
   return (
     <nav className={props.className}>
-      {navigation.map(({ name, href }) => {
+      {navigation.slice(1).map(({ name, href }) => {
         return (
           <Button as="a" variant="text" href={href} key={href}>
             {name}
@@ -49,14 +49,16 @@ const NavigationItems: FC<{ className?: string }> = props => {
   );
 };
 
-const FixedCallToActionButton = () => {
+const FixedCallToActionButton: FC<{ className?: string }> = props => {
   const scrollPos = useScrollPosition();
 
   const isDisplayBlock = scrollPos > 50;
   const isVisible = scrollPos > 100;
 
   return (
-    <ScrollableRelativeToParent className="z-10 text-right">
+    <ScrollableRelativeToParent
+      className={clsx('z-10 text-right', props.className)}
+    >
       <CallToActionButton
         aria-hidden={!isVisible}
         className={clsx(

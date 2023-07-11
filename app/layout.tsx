@@ -5,6 +5,9 @@ import './globals.css';
 import { getFontConfig } from '@/fonts/fonts.config';
 const { accent, sans } = getFontConfig();
 
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+
 import { Providers } from './providers';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -16,7 +19,13 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     >
       <head />
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <div className="min-h-screen" data-page-root>
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );
