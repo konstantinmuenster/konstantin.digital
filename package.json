@@ -8,7 +8,7 @@
     "url": "https://konstantin.digital"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "contentlayer dev & next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -17,14 +17,18 @@
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "clsx": "^1.2.1",
+    "contentlayer": "^0.3.4",
+    "date-fns": "^2.30.0",
     "lucide-react": "^0.259.0",
     "next": "13.4.9",
+    "next-contentlayer": "^0.3.4",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@kmuenster/prettier-config": "^1.0.1",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "20.4.0",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
@@ -32,12 +36,21 @@
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "eslint-config-prettier": "^8.8.0",
+    "postcss": "8.4.25",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "postcss": "8.4.25",
-    "tailwindcss": "3.3.2",
     "tailwind-variants": "^0.1.10",
+    "tailwindcss": "3.3.2",
     "typescript": "5.1.6"
+  },
+  "resolutions": {
+    "@opentelemetry/api": "1.4.1",
+    "@opentelemetry/core": "1.13.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
+    "@opentelemetry/resources": "1.13.0",
+    "@opentelemetry/sdk-trace-base": "1.13.0",
+    "@opentelemetry/sdk-trace-node": "1.13.0",
+    "@opentelemetry/semantic-conventions": "1.13.0"
   },
   "packageManager": "yarn@1.22.19"
 }
