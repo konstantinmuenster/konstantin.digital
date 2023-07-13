@@ -3,7 +3,7 @@ export const Pattern = () => {
     <div
       aria-hidden="true"
       className="fixed left-0 top-0 z-[-1] h-full w-full bg-repeat"
-      style={{ backgroundImage: 'url(./svgs/noise.svg)' }}
+      style={{ backgroundImage: 'url(./images/pattern/noise.svg)' }}
     />
   );
 };
