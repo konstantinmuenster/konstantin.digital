@@ -3538,6 +3538,11 @@ next-contentlayer@^0.3.4:
     "@contentlayer/core" "0.3.4"
     "@contentlayer/utils" "0.3.4"
 
+next-plausible@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.10.0.tgz#9a195c751b7baa93ec98f28cd8bee78593ab88ed"
+  integrity sha512-iXnt0+whmegBDCjcoSxMWpnBfdDKGKoYGXnFnS0miRxv5J5yzOi1nWQcDUOIYCk39tcclpBpC5hwtI4f3cZfNw==
+
 next-themes@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.2.1.tgz#0c9f128e847979daf6c67f70b38e6b6567856e45"

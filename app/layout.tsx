@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+import PlausibleAnalytics from 'next-plausible';
+
 import './globals.css';
 
 import { getFontConfig } from '@/fonts/fonts.config';
@@ -17,7 +19,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       className={`${accent.variable} ${sans.variable}`}
       suppressHydrationWarning
     >
-      <head />
+      <head>
+        <PlausibleAnalytics domain="konstantin.digital" />
+      </head>
       <body>
         <Providers>
           <div className="min-h-screen" data-page-root>
