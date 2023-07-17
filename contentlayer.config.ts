@@ -1,3 +1,7 @@
+import remarkGfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
 import {
   defineDocumentType,
   defineNestedType,
@@ -50,4 +54,18 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
-export default makeSource({ contentDirPath: 'content', documentTypes: [Post] });
+export default makeSource({
+  contentDirPath: 'content',
+  documentTypes: [Post],
+  mdx: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        { target: '_blank', rel: ['noopener', 'noreferrer', 'nofollow'] },
+      ],
+      rehypeSlug,
+      rehypeAutolinkHeadings,
+    ],
+  },
+});

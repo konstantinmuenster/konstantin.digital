@@ -17,6 +17,44 @@
     @apply px-6 lg:px-8;
   }
   .focus-default {
-    @apply focus:outline-none focus:ring-2 focus:ring-violet focus:ring-offset-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-violet focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black;
   }
+}
+
+/** AutoLinks in Blog Posts */
+h2[id],
+h3[id],
+h4[id],
+h5[id] {
+  position: relative;
+}
+h2[id]:hover > a > .icon-link:after,
+h3[id]:hover > a > .icon-link:after,
+h4[id]:hover > a > .icon-link:after,
+h5[id]:hover > a > .icon-link:after {
+  visibility: visible;
+}
+h2[id] > a > .icon-link,
+h3[id] > a > .icon-link,
+h4[id] > a > .icon-link,
+h5[id] > a > .icon-link {
+  position: absolute;
+  top: 0;
+  left: -1em;
+  width: 100%;
+  height: 2rem;
+}
+h2[id] > a > .icon-link:after,
+h3[id] > a > .icon-link:after,
+h4[id] > a > .icon-link:after,
+h5[id] > a > .icon-link:after {
+  visibility: hidden;
+  content: '#';
+  opacity: 0.25;
+}
+h2[id] > a > .icon-link:hover:after,
+h3[id] > a > .icon-link:hover:after,
+h4[id] > a > .icon-link:hover:after,
+h5[id] > a > .icon-link:hover:after {
+  visibility: visible;
 }
