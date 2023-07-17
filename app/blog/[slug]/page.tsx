@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { ArrowLeft } from 'lucide-react';
-import { format, parseISO } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import NextImage from 'next/image';
@@ -11,6 +10,7 @@ import { Label } from '@/components/Label';
 import { Avatar } from '@/components/Avatar';
 import { Tooltip } from '@/components/Tooltip';
 import { CTA } from '@/components/CTA';
+import { formatDate } from '@/utils/formatDate';
 
 import { mdxComponents } from './_mdxComponents';
 
@@ -30,7 +30,7 @@ const Post = ({ params }: { params: { slug: string } }) => {
         <Tooltip.Root placement="top">
           <Tooltip.Trigger asChild>
             <Link
-              href="/blog"
+              href="/blog#timeline"
               role="button"
               aria-label="View all posts"
               className="a-reset hover:bg-white-200 absolute -left-16 top-[46px] hidden p-1 opacity-50 hover:bg-black-100 dark:hover:bg-black-900 md:block"
@@ -62,7 +62,7 @@ const Post = ({ params }: { params: { slug: string } }) => {
               </span>
             </div>
             <time dateTime={post.publishedAt} className="text-sm opacity-75">
-              {format(parseISO(post.publishedAt), 'LLLL d, yyyy')}
+              {formatDate(post.publishedAt, 'LLLL d, yyyy')}
             </time>
           </div>
           {post.cover && (
