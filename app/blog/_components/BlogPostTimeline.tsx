@@ -22,7 +22,7 @@ export const BlogPostTimeline: FC = () => {
       <h2 className="block font-accent text-2xl font-medium md:mb-10 md:hidden">
         All Posts
       </h2>
-      <div className="mb-4 flex gap-2 overflow-x-auto py-4 pl-1 md:mb-8 md:py-0 md:pl-0">
+      <div className="mb-4 flex gap-2 overflow-x-auto py-4 pl-1">
         <Button
           as="button"
           size="sm"

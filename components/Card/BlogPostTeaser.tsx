@@ -63,7 +63,7 @@ export const BlogPostTeaser: FC<BlogPostTeaserProps> = ({
                   'h-full object-cover',
                   variant === 'image-vertical'
                     ? 'rounded-t-lg'
-                    : 'rounded-t-lg md:rounded-r-lg'
+                    : 'rounded-t-lg md:!rounded-r-lg md:rounded-t-none'
                 )}
               />
             )}

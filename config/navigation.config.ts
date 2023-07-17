@@ -1,8 +1,8 @@
 export const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Services', href: '/services' },
+  // { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
-  { name: 'About', href: '/about' },
+  // { name: 'About', href: '/about' },
 ];
 
 export const legals = [
