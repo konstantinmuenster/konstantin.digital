@@ -8,7 +8,6 @@ export const navigation = [
 export const legals = [
   { name: 'Transparency', href: '/transparency' },
   { name: 'Imprint', href: '/imprint' },
-  { name: 'Cookie Settings', href: '/cookies' },
 ];
 
 export const socials = [

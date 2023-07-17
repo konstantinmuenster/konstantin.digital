@@ -83,7 +83,7 @@ const Post = ({ params }: { params: { slug: string } }) => {
             </div>
           )}
         </div>
-        <div className="prose prose-lg prose-violet dark:prose-invert prose-a:no-underline">
+        <div className="prose-custom">
           <MDXContent components={mdxComponents} />
         </div>
         <div className="mt-12 flex flex-wrap items-center justify-start gap-2">

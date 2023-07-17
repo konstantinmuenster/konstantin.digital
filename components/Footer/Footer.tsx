@@ -27,6 +27,7 @@ export const Footer = () => {
                 return (
                   <Link
                     key={href}
+                    // @ts-expect-error
                     href={href}
                     className="a-reset focus-default"
                   >
@@ -41,13 +42,15 @@ export const Footer = () => {
             <nav className="flex flex-col gap-3">
               {socials.map(({ name, href }) => {
                 return (
-                  <Link
+                  <a
                     key={href}
                     href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="a-reset focus-default"
                   >
                     {name}
-                  </Link>
+                  </a>
                 );
               })}
             </nav>
@@ -59,6 +62,7 @@ export const Footer = () => {
                 return (
                   <Link
                     key={href}
+                    // @ts-expect-error
                     href={href}
                     className="a-reset focus-default"
                   >

@@ -19,6 +19,9 @@
   .focus-default {
     @apply focus:outline-none focus:ring-2 focus:ring-violet focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black;
   }
+  .prose-custom {
+    @apply prose prose-lg prose-violet dark:prose-invert prose-a:no-underline;
+  }
 }
 
 /** AutoLinks in Blog Posts */
