@@ -30,7 +30,7 @@ export const BlogPostTeaser: FC<BlogPostTeaserProps> = ({
         className={clsx(
           'rounded-lg border border-black-300 dark:border-black-700',
           variant === 'image-horizontal'
-            ? 'flex max-w-xs flex-col-reverse gap-4 md:grid md:max-w-3xl md:grid-cols-2'
+            ? 'flex max-w-xs flex-col-reverse items-center gap-4 md:grid md:max-w-3xl md:grid-cols-2'
             : '',
           variant !== 'image-horizontal' ? 'max-w-xs' : '',
           variant === 'image-vertical' ? 'flex flex-col-reverse' : '',

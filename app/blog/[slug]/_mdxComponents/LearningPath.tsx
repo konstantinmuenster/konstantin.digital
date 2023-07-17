@@ -10,7 +10,7 @@ export const MdxLearningPath: FC<MdxLearningPathProps> = ({ items }) => {
       <div className="not-prose bg-violet px-2 py-1 text-sm font-medium uppercase text-black/75">
         What We Cover
       </div>
-      <ul className="my-4 px-8">
+      <ul className="mx-2 my-4">
         {items.map(item => {
           return <li key={item}>{item}</li>;
         })}

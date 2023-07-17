@@ -13,9 +13,15 @@ const CATEGORIES = Object.keys(CategoryColors);
 export const BlogPostTimeline: FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>();
 
-  const posts = allPosts.filter(post => {
-    return selectedCategory ? post.category === selectedCategory : true;
-  });
+  const posts = allPosts
+    .filter(post => {
+      return selectedCategory ? post.category === selectedCategory : true;
+    })
+    .sort((a, b) => {
+      return (
+        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      );
+    });
 
   return (
     <div id="timeline" className="scroll-m-8">

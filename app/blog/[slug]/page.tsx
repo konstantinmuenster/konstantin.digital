@@ -50,7 +50,7 @@ const Post = ({ params }: { params: { slug: string } }) => {
               {post.category}
             </Label>
           )}
-          <h1 className="my-5 font-accent text-4xl font-bold md:text-5xl">
+          <h1 className="my-5 font-accent text-4xl font-bold md:text-5xl md:leading-tight">
             {post.title}
           </h1>
           <p className="text-lg">{post.summary}</p>
@@ -76,7 +76,7 @@ const Post = ({ params }: { params: { slug: string } }) => {
               />
               {post.cover.caption?.html && (
                 <div
-                  className="text-center text-xs opacity-50"
+                  className="text-center text-sm opacity-50"
                   dangerouslySetInnerHTML={{ __html: post.cover.caption.html }}
                 />
               )}
