@@ -39,3 +39,8 @@ next-env.d.ts
 
 # VS Code
 .vscode
+
+# Generated
+public/rss.xml
+public/robots.txt
+public/sitemap*.xml

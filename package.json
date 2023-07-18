@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "contentlayer dev & next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap && node scripts/rss.mjs",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write \"**/(*.js|*.ts|*.yml|*.tsx|*.md|*.json)\""
@@ -22,6 +22,7 @@
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.4",
     "date-fns": "^2.30.0",
+    "feed": "^4.2.2",
     "lucide-react": "^0.259.0",
     "next": "13.4.9",
     "next-contentlayer": "^0.3.4",
@@ -33,7 +34,8 @@
     "rehype-autolink-headings": "^6.1.1",
     "rehype-external-links": "^2.1.0",
     "rehype-slug": "^5.1.0",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^3.0.1",
+    "sharp": "^0.32.3"
   },
   "devDependencies": {
     "@kmuenster/prettier-config": "^1.0.1",
@@ -61,5 +63,8 @@
     "@opentelemetry/sdk-trace-node": "1.13.0",
     "@opentelemetry/semantic-conventions": "1.13.0"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
