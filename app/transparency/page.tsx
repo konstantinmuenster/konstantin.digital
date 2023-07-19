@@ -58,6 +58,11 @@ const Transparency = () => {
 
 export const metadata: Metadata = {
   title: 'Transparency',
+  description: undefined,
+  robots: {
+    follow: false,
+    index: false,
+  },
 };
 
 export default Transparency;

@@ -21,6 +21,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     >
       <head>
         <PlausibleAnalytics domain="konstantin.digital" />
+        {/* <meta name="og:image" /> is generated. */}
+        <meta property="og:image:alt" content="Konstantin Münster" />
+        {/* <meta name="twitter:image" /> is generated. */}
+        <meta property="og:image:alt" content="Konstantin Münster" />
         <link
           rel="alternate"
           type="application/rss+xml"
@@ -63,6 +67,43 @@ export const metadata: Metadata = {
     'MVP',
     'Startups',
   ],
+  themeColor: '#CEAFFA',
+  viewport: { width: 'device-width', initialScale: 1 },
+  alternates: {
+    canonical: 'https://konstantin.digital',
+    types: {
+      'application/rss+xml': '/rss.xml',
+    },
+  },
+  manifest: '/manifest.json',
+  twitter: {
+    card: 'summary_large_image',
+    site: '@kmuenster',
+    creator: '@kmuenster',
+    title: 'Konstantin Münster – Web & Product Developer',
+    description:
+      'As a freelance product engineer, I help startups build interactive and intuitive web apps.',
+  },
+  openGraph: {
+    type: 'profile',
+    firstName: 'Konstantin',
+    lastName: 'Münster',
+    username: 'kmuenster',
+    gender: 'he/him',
+    emails: ['hey@konstantin.digital'],
+    url: 'https://konstantin.digital',
+    siteName: 'Konstantin Münster',
+    title: 'Konstantin Münster – Web & Product Developer',
+    description:
+      'As a freelance product engineer, I help startups build interactive and intuitive web apps.',
+    countryName: 'Germany',
+    locale: 'en_US',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Konstantin Münster',
+  },
   formatDetection: {
     email: false,
     address: false,

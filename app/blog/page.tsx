@@ -35,6 +35,8 @@ const HeroTitle = (
 
 export const metadata: Metadata = {
   title: 'Blog',
+  description:
+    'I share my learnings on how to build interactive features with a product-first mindset.',
 };
 
 export default Blog;

@@ -61,6 +61,11 @@ const Imprint = () => {
 
 export const metadata: Metadata = {
   title: 'Imprint',
+  description: undefined,
+  robots: {
+    follow: false,
+    index: false,
+  },
 };
 
 export default Imprint;
