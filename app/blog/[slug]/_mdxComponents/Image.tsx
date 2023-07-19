@@ -16,7 +16,7 @@ export const MdxImage: FC<MdxImageProps> = ({ src, alt, caption }) => {
         alt={alt}
         width={800}
         height={600}
-        className="rounded-lg"
+        className="rounded-lg ring-2 ring-black-300 ring-offset-2 ring-offset-white dark:ring-black-700 dark:ring-offset-black"
       />
       {caption && (
         <p className="mt-2 text-center text-sm opacity-50">{caption}</p>

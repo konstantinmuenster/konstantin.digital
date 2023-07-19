@@ -72,7 +72,7 @@ const Post = ({ params }: { params: { slug: string } }) => {
                 alt={post.cover.alt}
                 width={1200}
                 height={800}
-                className="mb-2 rounded-lg"
+                className="mb-4 max-h-[400px] rounded-lg object-cover ring-4 ring-sun ring-offset-2 ring-offset-white dark:ring-offset-black"
               />
               {post.cover.caption?.html && (
                 <div
@@ -116,7 +116,27 @@ export const generateStaticParams = async () => {
 type GenerateMetadataParams = { params: { slug: string } };
 export const generateMetadata = (props: GenerateMetadataParams): Metadata => {
   const post = getPostBySlug(props.params.slug);
-  return { title: post.title, description: post.summary };
+  return {
+    title: {
+      absolute: post.title,
+    },
+    description: post.summary,
+    keywords: post.tags,
+    twitter: {
+      title: post.title,
+      description: post.summary,
+      site: '@kmuenster',
+    },
+    openGraph: {
+      type: 'article',
+      title: post.title,
+      description: post.summary,
+      url: `https://konstantin.digital/blog/${post.slug}`,
+      tags: post.tags,
+      publishedTime: post.publishedAt,
+      authors: 'Konstantin Münster',
+    },
+  };
 };
 
 export default Post;
