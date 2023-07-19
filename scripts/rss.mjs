@@ -32,7 +32,7 @@ const feed = new Feed({
 allPosts
   .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
   .forEach(post => {
-    const url = `https://konstantin.digital/${post.slug}`;
+    const url = `https://konstantin.digital/blog/${post.slug}`;
     feed.addItem({
       id: url,
       link: url,
