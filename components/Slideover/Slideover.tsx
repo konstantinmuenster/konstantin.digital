@@ -1,4 +1,5 @@
-import { FC, Fragment, ReactNode, useState } from 'react';
+import { FC, Fragment, ReactNode, useEffect, useState } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { Dialog, Transition } from '@headlessui/react';
 import { LucideIcon, X } from 'lucide-react';
 import clsx from 'clsx';
@@ -11,6 +12,12 @@ type SlideOverProps = {
 
 export const SlideOver: FC<SlideOverProps> = ({ children, title, Icon }) => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname, searchParams]);
 
   return (
     <>
