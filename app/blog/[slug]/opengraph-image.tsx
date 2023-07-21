@@ -86,9 +86,9 @@ export default async function Image({ params: { slug } }: any) {
     new URL('../../../fonts/Inter-Regular.ttf', import.meta.url)
   ).then(res => res.arrayBuffer());
 
-  const interBold = fetch(
-    new URL('../../../fonts/Inter-Bold.ttf', import.meta.url)
-  ).then(res => res.arrayBuffer());
+  // const interBold = fetch(
+  //   new URL('../../../fonts/Inter-Bold.ttf', import.meta.url)
+  // ).then(res => res.arrayBuffer());
 
   const post = allPosts.find(post => post.slug === slug);
   if (!post) throw new Error(`Post not found for slug: ${slug}`);
@@ -148,12 +148,12 @@ export default async function Image({ params: { slug } }: any) {
           style: 'normal',
           weight: 400,
         },
-        {
-          name: 'Inter',
-          data: await interBold,
-          style: 'normal',
-          weight: 700,
-        },
+        // {
+        //   name: 'Inter',
+        //   data: await interBold,
+        //   style: 'normal',
+        //   weight: 700,
+        // },
       ],
     }
   );
