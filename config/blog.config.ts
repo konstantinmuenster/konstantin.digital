@@ -10,6 +10,7 @@ export const CategoryColors: Record<
 } as const;
 
 export const favorites: Post['slug'][] = [
-  'why-open-source-projects-are-your-best-marketing',
+  'how-to-build-a-text-editor-like-notion',
   'adopting-a-no-code-mindset',
+  'why-open-source-projects-are-your-best-marketing',
 ];
