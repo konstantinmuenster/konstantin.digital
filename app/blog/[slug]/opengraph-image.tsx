@@ -12,18 +12,6 @@ export const size = {
 
 export const contentType = 'image/png';
 
-const uxumBold = fetch(
-  new URL('../../../fonts/UxumGrotesque-Bold.ttf', import.meta.url)
-).then(res => res.arrayBuffer());
-
-const interRegular = fetch(
-  new URL('../../../fonts/Inter-Regular.ttf', import.meta.url)
-).then(res => res.arrayBuffer());
-
-const interBold = fetch(
-  new URL('../../../fonts/Inter-Bold.ttf', import.meta.url)
-).then(res => res.arrayBuffer());
-
 const baseUrl =
   process.env.NODE_ENV === 'production'
     ? 'https://konstantin.digital'
@@ -89,6 +77,19 @@ const Background = ({ children }: any) => {
 };
 
 export default async function Image({ params: { slug } }: any) {
+  // Load fonts in component: https://github.com/vercel/next.js/issues/48081
+  const uxumBold = fetch(
+    new URL('../../../fonts/UxumGrotesque-Bold.ttf', import.meta.url)
+  ).then(res => res.arrayBuffer());
+
+  const interRegular = fetch(
+    new URL('../../../fonts/Inter-Regular.ttf', import.meta.url)
+  ).then(res => res.arrayBuffer());
+
+  const interBold = fetch(
+    new URL('../../../fonts/Inter-Bold.ttf', import.meta.url)
+  ).then(res => res.arrayBuffer());
+
   const post = allPosts.find(post => post.slug === slug);
   if (!post) throw new Error(`Post not found for slug: ${slug}`);
   return new ImageResponse(
