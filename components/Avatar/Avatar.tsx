@@ -14,7 +14,7 @@ export const Avatar: FC<AvatarProps> = ({ size = 32 }) => {
       alt="Konstantin Münster"
       width={size}
       height={size}
-      className="rounded-full border border-black/50"
+      className="rounded-full border border-black/50 bg-black-50 dark:bg-black-950"
     />
   );
 };

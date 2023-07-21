@@ -50,6 +50,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
  */
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://konstantin.digital'),
   authors: { name: 'Konstantin Münster' },
   creator: 'Konstantin Münster',
   publisher: 'Konstantin Münster',

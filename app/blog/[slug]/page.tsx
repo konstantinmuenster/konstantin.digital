@@ -72,7 +72,7 @@ const Post = ({ params }: { params: { slug: string } }) => {
                 alt={post.cover.alt}
                 width={1200}
                 height={800}
-                className="mb-4 max-h-[400px] rounded-lg object-cover ring-4 ring-sun ring-offset-2 ring-offset-white dark:ring-offset-black"
+                className="mb-4 max-h-[400px] rounded-lg bg-black-50 object-cover ring-4 ring-sun ring-offset-2 ring-offset-white dark:bg-black-950 dark:ring-offset-black"
               />
               {post.cover.caption?.html && (
                 <div

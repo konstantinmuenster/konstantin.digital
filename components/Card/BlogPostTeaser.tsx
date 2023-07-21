@@ -60,7 +60,7 @@ export const BlogPostTeaser: FC<BlogPostTeaserProps> = ({
                 width={400}
                 height={400}
                 className={clsx(
-                  'h-full object-cover',
+                  'h-full bg-black-50 object-cover dark:bg-black-950',
                   variant === 'image-vertical'
                     ? 'rounded-t-lg'
                     : 'rounded-t-lg md:!rounded-r-lg md:rounded-t-none'
