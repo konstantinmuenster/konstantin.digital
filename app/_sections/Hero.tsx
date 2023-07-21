@@ -7,7 +7,7 @@ export const HeroSection = () => {
     <div className="relative mb-16">
       <Hero
         title={HeroTitle}
-        description="I help startups build interactive web apps that meet users needs. Available for freelance work in Hamburg or remote."
+        description="I help startups build interactive web apps that meet users needs. Available for freelance work."
         actions={HeroActions}
       />
       <ThemeToggle className="absolute -bottom-10 left-0 md:bottom-0" />
