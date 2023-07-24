@@ -1,10 +1,10 @@
-name: CI
+name: Lighthouse
 on: [push]
 env:
   LHCI_BUILD_CONTEXT__CURRENT_HASH: ${{ github.event.pull_request.head.sha || github.sha }}
 
 jobs:
-  lighthouseci:
+  analyze-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
