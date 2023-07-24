@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Check accessibility
-        uses: ./
+        uses: a11ywatch/github-action@v2
         with:
           WEBSITE_URL: https://konstantin-digital.vercel.app/
           FAIL_TOTAL_COUNT: 0
