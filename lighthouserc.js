@@ -1,7 +1,7 @@
 module.exports = {
   ci: {
     collect: {
-      startServerCommand: 'npm run start',
+      startServerCommand: 'yarn start',
       startServerReadyPattern: 'ready on',
       url: ['http://127.0.0.1:3000'],
       numberOfRuns: 1,
