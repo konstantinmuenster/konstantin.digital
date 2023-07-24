@@ -1,0 +1,21 @@
+name: A11yWatch
+on: [pull_request]
+
+jobs:
+  run-container:
+    name: Bench Website Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check accessibility
+        uses: ./
+        with:
+          WEBSITE_URL: https://konstantin-digital.vercel.app/
+          FAIL_TOTAL_COUNT: 0
+          EXTERNAL: false
+          SITE_WIDE: true
+          SITEMAP: true
+          SUBDOMAINS: false
+          TLD: false
+          LIST: true
+          UPGRADE: false
