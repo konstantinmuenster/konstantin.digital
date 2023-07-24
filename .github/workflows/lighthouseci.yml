@@ -1,13 +1,16 @@
 name: CI
 on: [push]
+env:
+  LHCI_BUILD_CONTEXT__CURRENT_HASH: ${{ github.event.pull_request.head.sha || github.sha }}
+
 jobs:
   lighthouseci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '18'
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
       - run: yarn global add @lhci/cli@0.12.0
