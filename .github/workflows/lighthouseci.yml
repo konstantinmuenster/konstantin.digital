@@ -10,7 +10,7 @@ jobs:
           node-version: 18
           cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - run: yarn add -g @lhci/cli@0.8.x
+      - run: yarn global add @lhci/cli@0.8.x
       - run: yarn build
       - run: lhci collect
       - run: lhci upload
