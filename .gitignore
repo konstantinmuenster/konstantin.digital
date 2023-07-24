@@ -44,3 +44,4 @@ next-env.d.ts
 public/rss.xml
 public/robots.txt
 public/sitemap*.xml
+.lighthouseci

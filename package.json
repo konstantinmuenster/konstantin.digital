@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@kmuenster/prettier-config": "^1.0.1",
+    "@lhci/cli": "^0.12.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "20.4.0",
     "@types/react": "18.2.14",
