@@ -5,7 +5,7 @@
     @apply bg-white text-black motion-safe:scroll-smooth dark:bg-black dark:text-white;
   }
   a:not([role='button']):not(.a-reset) {
-    @apply border-b border-current font-medium opacity-80 hover:opacity-100 focus:border-violet focus:text-violet focus:outline-none;
+    @apply border-b border-current font-medium opacity-80 hover:opacity-100 focus-visible:border-violet focus-visible:text-violet focus-visible:outline-none;
   }
 }
 
@@ -17,7 +17,7 @@
     @apply px-6 lg:px-8;
   }
   .focus-default {
-    @apply focus:outline-none focus:ring-2 focus:ring-violet focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-black;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-black;
   }
   .prose-custom {
     @apply prose prose-lg prose-violet dark:prose-invert prose-a:no-underline;
