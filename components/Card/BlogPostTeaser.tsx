@@ -57,8 +57,8 @@ export const BlogPostTeaser: FC<BlogPostTeaserProps> = ({
               <Image
                 src={post.cover.src}
                 alt={post.cover.alt}
-                width={334}
-                height={210}
+                width={400}
+                height={220}
                 className={clsx(
                   'h-full bg-black-50 object-cover dark:bg-black-950',
                   variant === 'image-vertical'
