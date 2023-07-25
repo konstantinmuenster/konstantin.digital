@@ -41,7 +41,7 @@ export const BlogPostTeaser: FC<BlogPostTeaserProps> = ({
           <time className="text-sm opacity-75">
             {formatDate(post.publishedAt, 'dd LLLL yyyy')}
           </time>
-          <h3 className="my-1 text-xl font-medium">{post.title}</h3>
+          <h3 className="my-1 text-lg font-medium">{post.title}</h3>
           {variant !== 'minimal' && (
             <p className="my-1 text-sm opacity-75">{post.summary}</p>
           )}
@@ -57,8 +57,8 @@ export const BlogPostTeaser: FC<BlogPostTeaserProps> = ({
               <Image
                 src={post.cover.src}
                 alt={post.cover.alt}
-                width={400}
-                height={400}
+                width={334}
+                height={210}
                 className={clsx(
                   'h-full bg-black-50 object-cover dark:bg-black-950',
                   variant === 'image-vertical'
