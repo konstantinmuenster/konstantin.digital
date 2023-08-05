@@ -29,7 +29,7 @@ export const Hero: FC<HeroProps> = ({
         {title}
       </h1>
       <p className="my-5 text-center text-lg md:text-xl">{description}</p>
-      <div className="flex justify-center">{actions}</div>
+      <div className="flex items-center justify-center">{actions}</div>
     </div>
   );
 };
