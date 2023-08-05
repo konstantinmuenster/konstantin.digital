@@ -5,7 +5,7 @@ import { useState, type FC } from 'react';
 import { allPosts } from 'contentlayer/generated';
 
 import { CategoryColors } from '@/config/blog.config';
-import { BlogPostTeaser } from '@/components/Card';
+import { BlogPostCard } from '@/components/Card';
 import { Button } from '@/components/Button';
 
 const CATEGORIES = Object.keys(CategoryColors);
@@ -60,7 +60,7 @@ export const BlogPostTimeline: FC = () => {
       <div className="flex flex-col flex-wrap gap-4 sm:flex-row lg:flex-col">
         {posts.map(post => {
           return (
-            <BlogPostTeaser
+            <BlogPostCard
               key={post._id}
               post={post}
               variant="image-horizontal"

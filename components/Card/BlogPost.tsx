@@ -8,13 +8,13 @@ import clsx from 'clsx';
 import { formatDate } from '@/utils/formatDate';
 import { Label } from '../Label';
 
-type BlogPostTeaserProps = {
+type BlogPostCardProps = {
   post: Post;
   variant?: 'image-horizontal' | 'image-vertical' | 'default' | 'minimal';
   className?: string;
 };
 
-export const BlogPostTeaser: FC<BlogPostTeaserProps> = ({
+export const BlogPostCard: FC<BlogPostCardProps> = ({
   post,
   className,
   variant = 'default',

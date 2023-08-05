@@ -1,1 +1,2 @@
-export * from './BlogPostTeaser';
+export * from './BlogPost';
+export * from './Icon';
