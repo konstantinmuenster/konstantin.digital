@@ -84,7 +84,7 @@ const companies = [
     logo: '/images/companies/regioful-de.svg',
     url: 'https://www.regioful.de/',
     width: 140,
-    height: 40,
+    height: 50,
   },
   {
     name: 'Lazy',
@@ -97,7 +97,7 @@ const companies = [
     name: 'OTTO',
     logo: '/images/companies/otto.svg',
     url: 'https://www.otto.de/',
-    width: 100,
+    width: 90,
     height: 40,
   },
   {
@@ -132,7 +132,7 @@ const companies = [
     name: 'KABO KAFFEE',
     logo: '/images/companies/kabo.png',
     url: 'https://www.kabo-kaffee.de/',
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 55,
   },
 ];

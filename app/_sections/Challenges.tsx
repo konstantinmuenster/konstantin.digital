@@ -3,7 +3,7 @@ import { Cycle, Growth, ShakeHands, Target } from '@/components/Icon';
 
 export const ChallengesSection = () => {
   return (
-    <div className="relative mb-16">
+    <div className="relative mb-8 md:mb-16">
       <div className="px-container mx-auto max-w-container py-8">
         <h2 className="mb-12 mt-4 text-center font-accent text-4xl font-medium md:text-5xl">
           You don’t want to waste money for overpriced agencies with bloated
