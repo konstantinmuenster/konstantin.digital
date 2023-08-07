@@ -12,7 +12,7 @@ export const CompaniesSection = () => {
   }, []);
 
   return (
-    <div className="relative mb-16 flex min-h-[90px] items-center justify-center bg-violet/40 dark:bg-violet lg:min-h-[120px]">
+    <div className="relative mb-8 flex min-h-[90px] items-center justify-center bg-violet/40 dark:bg-violet md:mb-16 lg:min-h-[120px]">
       <Transition
         show={mounted}
         className="overflow-hidden"
@@ -33,8 +33,12 @@ export const CompaniesSection = () => {
                 <Image
                   src={company.logo}
                   alt={company.name}
-                  width={company.width || 140}
-                  height={company.height || 40}
+                  width={company.width * 2 || 140}
+                  height={company.height * 2 || 40}
+                  style={{
+                    width: company.width || 140,
+                    height: company.height || 40,
+                  }}
                   className="object-contain opacity-80 grayscale transition-all hover:opacity-100 dark:opacity-100"
                 />
               </a>
@@ -45,10 +49,10 @@ export const CompaniesSection = () => {
           className="flex w-[400%] animate-scrolling-container sm:w-[100%] lg:hidden"
           aria-hidden={true}
         >
-          {[...companies, ...companies].map(company => {
+          {[...companies, ...companies].map((company, key) => {
             return (
               <a
-                key={company.name}
+                key={key}
                 href={company.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -57,8 +61,12 @@ export const CompaniesSection = () => {
                 <Image
                   src={company.logo}
                   alt={company.name}
-                  width={company.width * 0.8 || 140}
-                  height={company.height * 0.8 || 40}
+                  width={company.width || 140}
+                  height={company.height || 40}
+                  style={{
+                    width: company.width * 0.8 || 140,
+                    height: company.height * 0.8 || 40,
+                  }}
                   className="object-contain opacity-80 grayscale transition-all hover:opacity-100 dark:opacity-100"
                 />
               </a>
