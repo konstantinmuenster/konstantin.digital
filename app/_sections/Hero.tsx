@@ -7,7 +7,7 @@ import { AvatarBubble } from '@/components/Avatar';
 
 export const HeroSection = () => {
   return (
-    <div className="px-container relative mx-auto mb-16 max-w-container">
+    <div className="px-container relative mx-auto mb-20 max-w-container">
       <Hero
         title={HeroTitle}
         description="Accelerate your startup with user-centric web apps. From idea to deployment in just 12 weeks, without agency overhead."
