@@ -22,7 +22,7 @@ export const AboutSection = () => {
         </div>
         <div className="max-w-[580px] flex-shrink-0 rounded-md border-4 border-black-100 bg-black-100 dark:border-black-800 dark:bg-black-800">
           <Image
-            src="/images/km-1.jpg"
+            src="/images/portraits/konstantin-muenster-wide-armchair.png"
             alt="Konstantin Münster"
             width={480 * 2}
             height={324 * 2}
