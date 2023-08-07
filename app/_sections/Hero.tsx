@@ -28,7 +28,7 @@ const HeroTitle = (
 
 const HeroActions = (
   <div className="mt-6 flex-col items-center justify-center text-center">
-    <Button as="a">Schedule idea sparring</Button>
+    <Button as="a">Let&apos;s challenge your idea</Button>
     <div className="mb-12 mt-6 flex gap-4 text-sm opacity-50">
       <span className="flex items-center gap-1">
         <CheckCircle size={18} /> 15min call
