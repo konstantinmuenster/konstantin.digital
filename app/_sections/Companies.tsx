@@ -12,7 +12,7 @@ export const CompaniesSection = () => {
   }, []);
 
   return (
-    <div className="relative mb-16 flex min-h-[90px] items-center justify-center bg-violet lg:min-h-[120px]">
+    <div className="relative mb-16 flex min-h-[90px] items-center justify-center bg-violet/40 dark:bg-violet lg:min-h-[120px]">
       <Transition
         show={mounted}
         className="overflow-hidden"
