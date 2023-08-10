@@ -1,2 +1,3 @@
-export * from './BlogPost';
-export * from './Icon';
+export * from './BlogPostCard';
+export * from './IconCard';
+export * from './ReviewCard';
