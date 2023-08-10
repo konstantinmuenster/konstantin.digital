@@ -30,9 +30,9 @@ type CTAProps = CTAVariants & {
 };
 
 export const CTA: FC<CTAProps> = ({
-  title = "Let's build your idea.",
-  description = 'Make your users happy. With an intuitive and interactive web application.',
-  buttonText = 'hey@konstantin.digital',
+  title = "Let's challenge your idea.",
+  description = 'Book a free call in which we challenge your idea and define actionable next steps towards your web app.',
+  buttonText = 'Book a free call',
   buttonLink = 'mailto:hey@konstantin.digital',
   secondaryButtonText,
   secondaryButtonLink,
@@ -41,8 +41,12 @@ export const CTA: FC<CTAProps> = ({
   return (
     <div className={cta({ variant })}>
       <div className="mx-auto max-w-4xl">
-        <h2 className="font-accent text-4xl font-bold md:text-5xl">{title}</h2>
-        <p className="mb-7 mt-5 text-lg">{description}</p>
+        <h2 className="font-accent text-4xl font-medium md:text-5xl">
+          {title}
+        </h2>
+        <p className="mx-auto mb-7 mt-5 max-w-3xl text-center text-xl">
+          {description}
+        </p>
         <div className="flex items-center justify-center gap-4">
           {secondaryButtonLink && secondaryButtonText && (
             <Button

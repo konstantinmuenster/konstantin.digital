@@ -5,9 +5,9 @@ import { ServiceMVPs, ServiceTailoredWebApps } from '@/components/Illustration';
 
 export const ServicesSection = () => {
   return (
-    <div className="relative mb-16">
+    <div className="relative mb-4 md:mb-8">
       <div className="px-container mx-auto max-w-container py-8">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto mb-8 max-w-4xl text-center md:mb-16">
           <h2 className="font-accent text-4xl font-bold md:text-5xl">
             Let’s develop a low-cost web app to get actionable user insights
             from the start!
@@ -18,7 +18,7 @@ export const ServicesSection = () => {
             life.
           </p>
         </div>
-        <div className="my-8 md:my-16">
+        <div>
           {services.map(({ title, benefits, Illustration, link }) => {
             return (
               <div
