@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export const AboutSection = () => {
   return (
-    <div className="relative mb-8 md:mb-16">
+    <div className="relative mb-8 border-b-4 border-black-200 dark:border-black-700 md:mb-16 md:border-b-0">
       <div className="px-container mx-auto flex max-w-xl flex-col-reverse items-center gap-8 py-8 md:gap-16 lg:max-w-container lg:flex-row">
-        <div className="">
+        <div>
           <h3 className="font-accent text-3xl font-medium md:text-4xl">
             Hey, I am Konstantin
           </h3>
