@@ -8,14 +8,15 @@ import { ServicesSection } from './_sections/Services';
 
 const Home = () => {
   return (
-    <main className="py-8">
+    <main>
       <HeroSection />
       <CompaniesSection />
       <ChallengesSection />
       <AboutSection />
       <ServicesSection />
-      <CTASection />
+      <CTASection variant="mint" />
       <ReviewsSection />
+      <CTASection variant="sun" />
     </main>
   );
 };

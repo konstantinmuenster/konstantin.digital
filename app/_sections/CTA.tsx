@@ -1,10 +1,15 @@
 import { CTA } from '@/components/CTA';
+import { FC } from 'react';
 
-export const CTASection = () => {
+type CTASectionProps = {
+  variant?: 'mint' | 'sun' | 'violet';
+};
+
+export const CTASection: FC<CTASectionProps> = ({ variant }) => {
   return (
     <div className="relative mb-16">
       <div className="px-container mx-auto max-w-container py-8">
-        <CTA variant="mint" />
+        <CTA variant={variant} />
       </div>
     </div>
   );
