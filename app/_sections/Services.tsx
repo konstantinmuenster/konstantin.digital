@@ -8,7 +8,7 @@ export const ServicesSection = () => {
     <div className="relative mb-4 md:mb-8">
       <div className="px-container mx-auto max-w-container py-8">
         <div className="mx-auto mb-8 max-w-4xl text-center md:mb-16">
-          <h2 className="font-accent text-4xl font-bold md:text-5xl">
+          <h2 className="font-accent text-4xl font-medium md:text-5xl">
             Let’s develop a low-cost web app to get actionable user insights
             from the start!
           </h2>
