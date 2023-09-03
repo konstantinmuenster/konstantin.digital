@@ -1,33 +1,39 @@
+import { Label } from '@/components/Label';
 import Image from 'next/image';
-// import Link from 'next/link';
 
 export const AboutSection = () => {
   return (
-    <div className="relative mb-8 border-b-4 border-black-200 dark:border-black-700 md:mb-16 md:border-b-0">
+    <div className="relative mb-16 border-b-4 border-black-200 dark:border-black-700 md:mb-32 md:border-b-0">
       <div className="px-container mx-auto flex max-w-xl flex-col-reverse items-center gap-8 py-8 md:gap-16 lg:max-w-container lg:flex-row">
         <div>
           <h3 className="font-accent text-3xl font-medium md:text-4xl">
             Hey, I am Konstantin
           </h3>
           <p className="my-5 text-xl md:text-2xl">
-            I am a freelance web developer with a background in product
-            management.
+            A freelance product engineer - or to put it simply: a product
+            manager who codes.
           </p>
           <p className="my-5">
-            I believe that it does not need huge teams to build successful web
-            apps. It only needs an agile and product-oriented mindset. Launching
-            fast and getting better step by step.
+            My passion has always been at the intersection of product and web
+            development. I love talking to users and developing ideas as much as
+            coding with a good lo-fi playlist running in the back 🎧
           </p>
-          {/* <Link href={'/about'}>Get to know me</Link> */}
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Label color="grey">5+ years of building web apps</Label>
+            <Label color="grey">educator at techlabs.org</Label>
+          </div>
         </div>
-        <div className="max-w-[580px] flex-shrink-0 rounded-md border-4 border-black-100 bg-black-100 dark:border-black-800 dark:bg-black-800">
+        <div className="max-w-[580px] flex-shrink-0 rounded-md">
           <Image
-            src="/images/portraits/konstantin-muenster-wide-armchair.png"
+            src="/images/portraits/konstantin-muenster-wide-couch.jpg"
             alt="Konstantin Münster"
             width={480 * 2}
             height={324 * 2}
             className="h-full w-full rounded-md object-cover"
           />
+          <span className="mt-2 hidden text-center text-xs opacity-50 md:block">
+            Building web apps since high school. Waiting for yours since.
+          </span>
         </div>
       </div>
     </div>

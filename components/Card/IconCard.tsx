@@ -1,8 +1,10 @@
+import { FC } from 'react';
 import clsx from 'clsx';
-import { FC, ReactElement } from 'react';
+
+import { type IconProps } from '../Icon';
 
 type IconCardProps = {
-  Icon: FC;
+  Icon: FC<IconProps>;
   title: string;
   description?: string;
   className?: string;
@@ -15,10 +17,17 @@ export const IconCard: FC<IconCardProps> = ({
   description,
 }) => {
   return (
-    <div className={clsx('flex-col', className)}>
-      <Icon />
-      <p className="my-4">{title}</p>
-      <p>{description}</p>
+    <div
+      className={clsx(
+        'flex flex-row items-start justify-start gap-6',
+        className
+      )}
+    >
+      <Icon className="flex-shrink-0" />
+      <div>
+        <p>{title}</p>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };

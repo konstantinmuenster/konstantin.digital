@@ -10,7 +10,7 @@ export const HeroSection = () => {
     <div className="px-container relative mx-auto mb-20 mt-8 max-w-container">
       <Hero
         title={HeroTitle}
-        description="Accelerate your startup with user-centric web apps. From idea to deployment in just 12 weeks, without agency overhead."
+        description="Turn your product’s pain into production-ready features that unlock opportunities. For startups and scale-ups."
         actions={HeroActions}
       />
       <ThemeToggle className="absolute -bottom-10 left-0 md:bottom-0" />
@@ -20,7 +20,7 @@ export const HeroSection = () => {
 
 const HeroTitle = (
   <div className="relative">
-    <AvatarBubble className="absolute -right-24 -top-12 hidden lg:block" />
+    <AvatarBubble className="absolute -right-44 -top-16 hidden lg:block" />
     <span className="block text-violet">Writing code,</span>
     <span className="block">thinking product.</span>
   </div>
@@ -28,14 +28,14 @@ const HeroTitle = (
 
 const HeroActions = (
   <div className="mt-6 flex-col items-center justify-center text-center">
-    <Button as="a">Let&apos;s challenge your idea</Button>
+    <Button as="a">Book Fresh Eyes Audit</Button>
     <div className="mb-12 mt-6 flex gap-4 text-sm opacity-50">
       <span className="flex items-center gap-1">
-        <CheckCircle size={18} /> 15min call
+        <CheckCircle size={18} /> 20min call
       </span>
       <span className="flex items-center gap-1">
         <CheckCircle size={18} />
-        Get feedback on your idea
+        Get product feedback
       </span>
     </div>
   </div>

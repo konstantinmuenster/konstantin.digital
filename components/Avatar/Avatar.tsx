@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-import AvatarImg from './avatar.jpg';
+import AvatarImg from './konstantin-muenster-avatar.jpg';
 
 type AvatarProps = {
   size?: number;

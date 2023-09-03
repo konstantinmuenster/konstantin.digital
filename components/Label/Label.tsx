@@ -2,7 +2,7 @@ import { ComponentProps, FC } from 'react';
 import { VariantProps, tv } from 'tailwind-variants';
 
 const label = tv({
-  base: 'rounded-full',
+  base: 'w-fit rounded-full',
   variants: {
     color: {
       violet:

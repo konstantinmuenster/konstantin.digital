@@ -12,7 +12,7 @@ export const CompaniesSection = () => {
   }, []);
 
   return (
-    <div className="relative mb-8 flex min-h-[90px] items-center justify-center bg-violet/40 dark:bg-violet md:mb-16 lg:min-h-[120px]">
+    <div className="relative mb-16 flex min-h-[90px] items-center justify-center bg-violet/40 dark:bg-violet md:mb-32 lg:min-h-[120px]">
       <Transition
         show={mounted}
         className="overflow-hidden"
@@ -35,6 +35,7 @@ export const CompaniesSection = () => {
                   alt={company.name}
                   width={company.width * 2 || 140}
                   height={company.height * 2 || 40}
+                  loading="eager" // Needed for slider on mobile
                   style={{
                     width: company.width || 140,
                     height: company.height || 40,
