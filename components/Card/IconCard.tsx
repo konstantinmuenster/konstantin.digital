@@ -26,7 +26,7 @@ export const IconCard: FC<IconCardProps> = ({
       <Icon className="flex-shrink-0" />
       <div>
         <p>{title}</p>
-        <p>{description}</p>
+        <p className="opacity-90">{description}</p>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ const Home = () => {
       <ChallengesSection />
       <AboutSection />
       <ServicesSection />
-      <CTASection variant="mint" />
+      <CTASection id="cta-services" variant="mint" />
       <ReviewsSection />
       <CTASection variant="sun" />
     </main>

@@ -1,8 +1,11 @@
 @tailwind base;
 
 @layer base {
+  html {
+    @apply motion-safe:!scroll-smooth;
+  }
   body {
-    @apply bg-black-50 text-black motion-safe:scroll-smooth dark:bg-black dark:text-white;
+    @apply bg-black-50 text-black dark:bg-black dark:text-white;
   }
   a:not([role='button']):not(.a-reset) {
     @apply border-b border-current font-medium opacity-80 hover:opacity-100 focus-visible:border-violet focus-visible:text-violet focus-visible:outline-none;

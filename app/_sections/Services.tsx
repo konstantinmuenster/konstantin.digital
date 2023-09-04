@@ -1,38 +1,38 @@
 import { Check } from 'lucide-react';
 
 import { Button } from '@/components/Button';
-import { ServiceMVPs, ServiceTailoredWebApps } from '@/components/Illustration';
+import { CodeBrackets, Pointer } from '@/components/Illustration';
+import { Growth, PuzzlePiece, SpeedingClock } from '@/components/Icon';
+import { Label } from '@/components/Label';
 
 export const ServicesSection = () => {
   return (
-    <div className="relative mb-4 md:mb-8">
-      <div className="px-container mx-auto max-w-container py-8">
-        <div className="mx-auto mb-8 max-w-4xl text-center md:mb-16">
+    <div className="relative mb-12 bg-gradient-to-b from-black-50 via-sun/5 to-black-50 dark:from-black dark:to-black md:mb-24">
+      <div className="px-container mx-auto max-w-container">
+        <div className="mx-auto max-w-4xl text-center md:mb-12">
           <h2 className="font-accent text-4xl font-medium md:text-5xl">
-            Let’s develop a low-cost web app to get actionable user insights
-            from the start!
+            Combining product and development.
           </h2>
-          <p className="mx-auto my-5 max-w-3xl text-xl md:text-2xl">
-            Whether it&apos;s a SaaS product, advanced website features or an
-            MVP to address new territories - I can help bring your ideas to
-            life.
+          <p className="mx-auto mt-5 max-w-3xl text-xl md:text-2xl">
+            I support you right where your challenges are – or might be in the
+            future. Seamlessly switching between discovery and delivery.
           </p>
         </div>
-        <div>
-          {services.map(({ title, benefits, Illustration, link }) => {
+        <div className="my-12 flex items-center justify-center">
+          <Label color="grey" size="lg">
+            How collaborations can look like
+          </Label>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:gap-12">
+          {services.map(({ title, benefits, Decoration, link }) => {
             return (
-              <div
-                key={title}
-                className="flex flex-col gap-8 py-8 md:flex-row md:items-center md:gap-16 lg:py-16"
-              >
-                {Illustration && (
-                  <Illustration className="max-w-sm lg:max-w-md" />
-                )}
-                <div className="max-w-xl">
-                  <h3 className="font-accent text-3xl font-medium md:text-4xl">
-                    {title}
+              <div key={title} className="flex">
+                <div className="relative max-w-sm rounded-2xl border-2 border-violet/75 bg-black-50 px-8 py-10 ring-2 ring-violet/25 ring-offset-2 dark:bg-black dark:ring-offset-black">
+                  <h3 className="font-accent text-3xl font-medium">
+                    You primarily need a{' '}
+                    <span className="text-violet">{title}</span>
                   </h3>
-                  <ul className="my-5 flex flex-col gap-3">
+                  <ul className="mb-8 mt-5 flex flex-col gap-3 opacity-90">
                     {benefits.map(benefit => {
                       return (
                         <li key={benefit} className="flex gap-4">
@@ -42,9 +42,22 @@ export const ServicesSection = () => {
                     })}
                   </ul>
                   <Button as="a" href={link} size="sm">
-                    Learn more
+                    Get in touch
                   </Button>
+                  <Decoration className="absolute bottom-8 right-8 opacity-90" />
                 </div>
+              </div>
+            );
+          })}
+        </div>
+        <p className="py-16 text-center">either way...</p>
+        <div className="flex flex-col items-center justify-center gap-10 md:flex-row lg:gap-20">
+          {coreBenefits.map(({ title, description, Icon }) => {
+            return (
+              <div key={title} className="flex max-w-xs flex-col gap-2">
+                <Icon className="h-20 w-20" />
+                <span className="font-semibold">{title}</span>
+                <span className="opacity-90">{description}</span>
               </div>
             );
           })}
@@ -56,24 +69,39 @@ export const ServicesSection = () => {
 
 const services = [
   {
-    title: 'Get a custom-built web app that truly solves your needs',
+    title: 'product manager',
     benefits: [
-      'Bring your own design or we create one from scratch together.',
-      'I use modern technologies and best-practices to deliver state-of-the-art sites that are accessible and fast for all users.',
-      'I offer continuous support & maintenance alongside every project – which means your app will grow with your business.',
-      'Collaboration at eye level – I guide you through the process with transparency and space for feedback at all stages.',
+      'I listen to user feedback, develop solutions, and manage the delivery.',
+      'Worried about a bloated backlog? Whenever needed, I can directly execute on ideas we developed.',
     ],
-    Illustration: ServiceTailoredWebApps,
-    link: '/services',
+    Decoration: Pointer,
+    link: '#cta-services',
   },
   {
-    title: 'Get a low-cost web app to validate your idea with real users',
+    title: 'web developer',
     benefits: [
-      'An MVP built within weeks – without the costs and bureaucracy of an agency.',
-      'Having worked as product manager and web developer, I know how products are built and can guide you through the process.',
-      'I use modern technologies and best-practices – so you can extend (rather than throw away) your product once validated.',
+      'I design and implement features based on your existing strategy.',
+      'Shipping faster from day one. As a product-minded developer, I can figure out missing specs myself.',
     ],
-    Illustration: ServiceMVPs,
-    link: '/services',
+    Decoration: CodeBrackets,
+    link: '#cta-services',
+  },
+];
+
+const coreBenefits = [
+  {
+    title: 'A silver bullet for your team.',
+    description: 'Staying flexible as your product grows.',
+    Icon: PuzzlePiece,
+  },
+  {
+    title: 'You ship what matters.',
+    description: 'Without agonizing over code details.',
+    Icon: Growth,
+  },
+  {
+    title: 'You spend more time on strategy.',
+    description: 'Less on tightly managing engineers.',
+    Icon: SpeedingClock,
   },
 ];

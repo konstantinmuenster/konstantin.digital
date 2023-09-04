@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const AboutSection = () => {
   return (
-    <div className="relative mb-16 border-b-4 border-black-200 dark:border-black-700 md:mb-32 md:border-b-0">
+    <div className="relative mb-16 md:mb-32">
       <div className="px-container mx-auto flex max-w-xl flex-col-reverse items-center gap-8 py-8 md:gap-16 lg:max-w-container lg:flex-row">
         <div>
           <h3 className="font-accent text-3xl font-medium md:text-4xl">
@@ -13,7 +13,7 @@ export const AboutSection = () => {
             A freelance product engineer - or to put it simply: a product
             manager who codes.
           </p>
-          <p className="my-5">
+          <p className="my-5 opacity-90">
             My passion has always been at the intersection of product and web
             development. I love talking to users and developing ideas as much as
             coding with a good lo-fi playlist running in the back 🎧

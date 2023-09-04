@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { ComponentProps } from 'react';
 
 export const ServiceTailoredWebApps = (props: ComponentProps<'svg'>) => {
@@ -188,6 +189,41 @@ export const ServiceMVPs = (props: ComponentProps<'svg'>) => {
           <path fill="#fff" d="M57 43.5h325.82v292.99H57z" />
         </clipPath>
       </defs>
+    </svg>
+  );
+};
+
+export const Pointer = (props: ComponentProps<'svg'>) => {
+  return (
+    <svg
+      {...props}
+      viewBox="0 0 23 29"
+      xmlns="http://www.w3.org/2000/svg"
+      className={clsx('h-7 w-7', props.className)}
+    >
+      <path
+        className="fill-black dark:fill-white"
+        d="M0 0v28.99l9.508-9.508H22.34L0 0Z"
+      />
+    </svg>
+  );
+};
+
+export const CodeBrackets = (props: ComponentProps<'svg'>) => {
+  return (
+    <svg
+      {...props}
+      viewBox="0 0 50 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={clsx('h-10 w-10', props.className)}
+    >
+      <path
+        className="stroke-black dark:stroke-white"
+        strokeMiterlimit="10"
+        strokeWidth="2"
+        d="M17.66 5.84 3 13.39l14.66 7.08M28.53 1l-8.81 22.91M32.67 5.84l14.66 7.52-14.66 7.11"
+      />
     </svg>
   );
 };
