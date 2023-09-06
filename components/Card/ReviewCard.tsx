@@ -19,7 +19,7 @@ export const ReviewCard: FC<ReviewCardProps> = props => {
   };
 
   return (
-    <div className="h-min w-full flex-1 rounded-lg border border-violet bg-white p-8 shadow-sm dark:bg-black md:max-w-sm">
+    <div className="h-min w-full flex-1 rounded-lg border border-violet bg-white p-8 shadow-sm dark:border-black-400 dark:bg-black/90 md:max-w-sm">
       <div className="flex gap-2">
         <Image
           src={props.avatar}

@@ -2,15 +2,15 @@ import { ReviewCard } from '@/components/Card';
 
 export const ReviewsSection = () => {
   return (
-    <div className="relative mb-8 bg-violet/40 md:mb-16">
-      <div className="px-container mx-auto max-w-container py-16">
-        <h3 className="mb-5 mt-4 text-center font-accent text-4xl font-medium md:text-5xl">
-          What others say about my work
+    <div className="relative mb-16 bg-violet/40 dark:bg-violet/90 md:mb-32">
+      <div className="px-container mx-auto max-w-container pb-16 pt-12 md:py-24">
+        <h3 className="mb-5 mt-4 text-center font-accent text-4xl font-medium dark:text-black md:text-5xl">
+          What others say about my work.
         </h3>
-        <p className="my-5 text-center text-xl">
-          Some words from startups, NGOs, corporates I have worked with
+        <p className="my-5 text-center text-xl dark:text-black dark:opacity-90">
+          Some nice words from nice people I have worked with.
         </p>
-        <div className="flex flex-col flex-wrap gap-5 py-10 md:flex-row lg:gap-10">
+        <div className="grid grid-cols-1 gap-5 pt-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
           {reviews.map((review, index) => {
             return <ReviewCard {...review} key={index} />;
           })}
