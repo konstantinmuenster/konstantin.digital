@@ -37,6 +37,9 @@ export const metadata: Metadata = {
   title: 'Blog',
   description:
     'I share my learnings on how to build interactive features with a product-first mindset.',
+  alternates: {
+    canonical: `https://konstantin.digital/blog`,
+  },
 };
 
 export default Blog;
