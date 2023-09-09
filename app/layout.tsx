@@ -56,13 +56,14 @@ export const metadata: Metadata = {
   publisher: 'Konstantin Münster',
   title: {
     template: '%s | Konstantin Münster',
-    default: 'Konstantin Münster – Web & Product Developer',
+    default: 'Konstantin Münster – Product Engineer',
   },
   description:
-    'As a freelance product engineer, I help startups build interactive and intuitive web apps.',
+    'Turn your product’s pain into production-ready features that unlock opportunities. For startups and scale-ups.',
   keywords: [
     'Web Development',
     'Freelancer',
+    'Product Engineer',
     'Product Development',
     'Product Management',
     'MVP',
@@ -81,9 +82,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@kmuenster',
     creator: '@kmuenster',
-    title: 'Konstantin Münster – Web & Product Developer',
+    title: 'Konstantin Münster – Product Engineer',
     description:
-      'As a freelance product engineer, I help startups build interactive and intuitive web apps.',
+      'Turn your product’s pain into production-ready features that unlock opportunities. For startups and scale-ups.',
   },
   openGraph: {
     type: 'profile',
@@ -94,9 +95,9 @@ export const metadata: Metadata = {
     emails: ['hey@konstantin.digital'],
     url: 'https://konstantin.digital',
     siteName: 'Konstantin Münster',
-    title: 'Konstantin Münster – Web & Product Developer',
+    title: 'Konstantin Münster – Product Engineer',
     description:
-      'As a freelance product engineer, I help startups build interactive and intuitive web apps.',
+      'Turn your product’s pain into production-ready features that unlock opportunities. For startups and scale-ups.',
     countryName: 'Germany',
     locale: 'en_US',
   },
