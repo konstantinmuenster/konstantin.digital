@@ -4,6 +4,7 @@ import { Button } from '@/components/Button';
 import { CodeBrackets, Pointer } from '@/components/Illustration';
 import { Growth, PuzzlePiece, SpeedingClock } from '@/components/Icon';
 import { Label } from '@/components/Label';
+import { FreshEyesAuditSchedulingLink } from '@/config/navigation.config';
 
 export const ServicesSection = () => {
   return (
@@ -24,7 +25,7 @@ export const ServicesSection = () => {
           </Label>
         </div>
         <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:gap-12">
-          {services.map(({ title, benefits, Decoration, link }) => {
+          {services.map(({ title, benefits, Decoration }) => {
             return (
               <div key={title} className="flex">
                 <div className="relative max-w-sm rounded-2xl border-2 border-violet/75 bg-black-50 px-8 py-10 ring-2 ring-violet/25 ring-offset-2 dark:bg-black dark:ring-offset-black">
@@ -41,7 +42,7 @@ export const ServicesSection = () => {
                       );
                     })}
                   </ul>
-                  <Button as="a" href={link} size="sm">
+                  <Button as="a" href={FreshEyesAuditSchedulingLink} size="sm">
                     Get in touch
                   </Button>
                   <Decoration className="absolute bottom-8 right-8 opacity-90" />
@@ -75,7 +76,6 @@ const services = [
       'Worried about a bloated backlog? Whenever needed, I can directly execute on ideas we developed.',
     ],
     Decoration: Pointer,
-    link: '#cta-services',
   },
   {
     title: 'web developer',
@@ -84,7 +84,6 @@ const services = [
       'Shipping faster from day one. As a product-minded developer, I can figure out missing specs myself.',
     ],
     Decoration: CodeBrackets,
-    link: '#cta-services',
   },
 ];
 

@@ -4,6 +4,7 @@ import { Button } from '@/components/Button';
 import { Hero } from '@/components/Hero';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { AvatarBubble } from '@/components/Avatar';
+import { FreshEyesAuditSchedulingLink } from '@/config/navigation.config';
 
 export const HeroSection = () => {
   return (
@@ -28,7 +29,9 @@ const HeroTitle = (
 
 const HeroActions = (
   <div className="mt-6 flex-col items-center justify-center text-center">
-    <Button as="a">Book Fresh Eyes Audit</Button>
+    <Button as="a" href={FreshEyesAuditSchedulingLink}>
+      Book Fresh Eyes Audit
+    </Button>
     <div className="mb-12 mt-6 flex gap-4 text-sm opacity-50">
       <span className="flex items-center gap-1">
         <CheckCircle size={18} /> 20min call

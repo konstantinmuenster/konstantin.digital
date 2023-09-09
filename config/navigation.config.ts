@@ -17,3 +17,6 @@ export const socials = [
   { name: 'GitHub', href: 'https://github.com/konstantinmuenster' },
   { name: 'Medium', href: 'https://medium.com/@konstantinmuenster' },
 ];
+
+export const FreshEyesAuditSchedulingLink =
+  'https://cal.com/kmuenster/fresh-eyes-audit';

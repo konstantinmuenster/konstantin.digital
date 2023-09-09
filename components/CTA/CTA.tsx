@@ -5,6 +5,7 @@ import { VariantProps, tv } from 'tailwind-variants';
 
 import { Button } from '../Button';
 import { Avatar } from '../Avatar';
+import { FreshEyesAuditSchedulingLink } from '@/config/navigation.config';
 
 const cta = tv({
   base: 'rounded-[20px] px-10 py-10 text-center text-black shadow-sm',
@@ -37,7 +38,7 @@ export const CTA: FC<CTAProps> = ({
   title = "Let's challenge your product.",
   description = 'Fresh eyes help generate new perspectives. Book a free call in which we identify opportunities and broken flows in your web app.',
   buttonText = 'Schedule free call',
-  buttonLink = 'mailto:hey@konstantin.digital',
+  buttonLink = FreshEyesAuditSchedulingLink,
   buttonAdornment = <DefaultButtonAdornment />,
   benefits = ['20min call', 'Get product feedback'],
   secondaryButtonText,
