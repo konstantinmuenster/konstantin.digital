@@ -244,7 +244,7 @@ export const ProjectStep1 = (props: ComponentProps<'svg'>) => {
         />
         <path
           fill="#F9DF78"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           stroke="#000"
           strokeMiterlimit="10"
           d="M60.92 45.208c19.194 0 34.767 15.613 34.767 34.838 0 19.224-15.582 34.837-34.768 34.837S26.151 99.27 26.151 80.046c0-19.225 15.582-34.838 34.768-34.838Z"
@@ -252,7 +252,7 @@ export const ProjectStep1 = (props: ComponentProps<'svg'>) => {
         />
         <path
           fill="#fff"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           stroke="#000"
           strokeMiterlimit="10"
           d="m43.19 82.055 9.938 9.957a1.66 1.66 0 0 0 2.297.044l23.179-21.57a1.657 1.657 0 1 0-2.252-2.434L54.337 88.534l-8.806-8.825a1.656 1.656 0 1 0-2.341 2.346Z"

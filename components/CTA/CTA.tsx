@@ -75,7 +75,7 @@ export const CTA: FC<CTAProps> = ({
           {buttonAdornment}
         </div>
         {benefits && (
-          <div className="mt-6 flex justify-center gap-4 text-sm opacity-50">
+          <div className="mt-6 flex justify-center gap-4 text-xs opacity-50 sm:text-sm">
             {benefits.map(benefit => {
               return (
                 <span key={benefit} className="flex items-center gap-1">
@@ -94,7 +94,7 @@ const DefaultButtonAdornment = () => {
   return (
     <div className="hidden -space-x-3 overflow-hidden p-1 sm:flex">
       <Avatar size={40} className="inline-block ring-2 ring-black-100" />
-      <div className="flex-shrink-ß0 inline-flex h-10 w-10 items-center justify-center rounded-full bg-mint ring-2 ring-black-100">
+      <div className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-mint ring-2 ring-black-100">
         <span className="text-2xl font-semibold text-black/20">?</span>
       </div>
     </div>
