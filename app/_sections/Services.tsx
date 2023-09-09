@@ -85,7 +85,7 @@ const services = [
     title: 'web developer',
     benefits: [
       'I design and implement features based on your existing strategy.',
-      'Shipping faster from day one. As a product-minded developer, I can figure out missing specs myself.',
+      'Lacking detailed mockups and specs? No worries, these are exciting puzzles to deal with.',
     ],
     Decoration: CodeBrackets,
   },
