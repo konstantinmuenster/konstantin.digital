@@ -65,7 +65,11 @@ export const CTA: FC<CTAProps> = ({
               {secondaryButtonText}
             </Button>
           )}
-          <Button as="a" href={buttonLink} className="!bg-black !text-white">
+          <Button
+            as="a"
+            href={`${buttonLink}?source=CTA`}
+            className="!bg-black !text-white"
+          >
             {buttonText}
           </Button>
           {buttonAdornment}
