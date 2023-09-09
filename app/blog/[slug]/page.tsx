@@ -127,6 +127,9 @@ export const generateMetadata = (props: GenerateMetadataParams): Metadata => {
       description: post.summary,
       site: '@kmuenster',
     },
+    alternates: {
+      canonical: `https://konstantin.digital/blog/${post.slug}`,
+    },
     openGraph: {
       type: 'article',
       title: post.title,

@@ -17,7 +17,7 @@ const button = tv({
     },
     size: {
       sm: 'text-base font-normal',
-      md: 'text-lg font-medium',
+      md: 'text-lg font-normal',
     },
   },
   defaultVariants: {

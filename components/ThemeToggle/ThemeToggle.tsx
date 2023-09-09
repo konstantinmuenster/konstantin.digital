@@ -12,9 +12,7 @@ type ThemeToggleProps = {
 export const ThemeToggle: FC<ThemeToggleProps> = ({ className }) => {
   const [mounted, setMounted] = useState(false);
 
-  const { theme, setTheme } = useTheme();
-  const isDarkMode = theme === 'dark';
-
+  const { resolvedTheme, setTheme } = useTheme();
   useEffect(() => setMounted(true), []);
 
   return (
@@ -26,30 +24,17 @@ export const ThemeToggle: FC<ThemeToggleProps> = ({ className }) => {
     >
       {mounted && (
         <Switch
-          checked={isDarkMode}
-          onChange={() => setTheme(isDarkMode ? 'light' : 'dark')}
+          checked={resolvedTheme === 'dark'}
+          onChange={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
           className={clsx(
             'focus-default flex w-[76px] cursor-pointer items-center rounded-full bg-black px-[6px] py-[5px] transition dark:bg-black-900',
             className
           )}
         >
           <span className="sr-only">Toggle light and dark mode</span>
-          <span
-            className={clsx(
-              'inline-block h-7 w-7 transform rounded-full bg-violet transition',
-              isDarkMode ? 'translate-x-9' : 'translate-x-0'
-            )}
-          />
-          <LightIcon
-            fill={isDarkMode ? 'white' : 'black'}
-            opacity={isDarkMode ? 0.5 : 1}
-            className="absolute left-[11px] top-[10px] inline-block h-[18px] w-[18px]"
-          />
-          <DarkIcon
-            fill={isDarkMode ? 'black' : 'white'}
-            opacity={isDarkMode ? 1 : 0.5}
-            className="absolute right-[11px] top-[10px] inline-block h-[18px] w-[18px]"
-          />
+          <span className="inline-block h-7 w-7 translate-x-0 transform rounded-full bg-violet transition dark:translate-x-9" />
+          <LightIcon className="absolute left-[11px] top-[10px] inline-block h-[18px] w-[18px] fill-black opacity-100 dark:fill-white dark:opacity-50" />
+          <DarkIcon className="absolute right-[11px] top-[10px] inline-block h-[18px] w-[18px] fill-white opacity-50 dark:fill-black dark:opacity-100" />
         </Switch>
       )}
     </Transition>

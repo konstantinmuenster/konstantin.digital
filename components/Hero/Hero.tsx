@@ -28,8 +28,10 @@ export const Hero: FC<HeroProps> = ({
       <h1 className="text-center font-accent text-6xl font-bold md:text-7xl">
         {title}
       </h1>
-      <p className="my-5 text-center text-lg md:text-xl">{description}</p>
-      <div className="flex justify-center">{actions}</div>
+      <p className="my-5 text-center text-lg opacity-90 md:text-xl">
+        {description}
+      </p>
+      <div className="flex items-center justify-center">{actions}</div>
     </div>
   );
 };

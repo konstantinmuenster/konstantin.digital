@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { allPosts } from 'contentlayer/generated';
 
 import { favorites } from '@/config/blog.config';
-import { BlogPostTeaser } from '@/components/Card';
+import { BlogPostCard } from '@/components/Card';
 
 export const FeaturedBlogPosts: FC = () => {
   const featured = allPosts.filter(post => favorites.includes(post.slug));
@@ -16,7 +16,7 @@ export const FeaturedBlogPosts: FC = () => {
       </h2>
       <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap lg:flex-col">
         {featured.map(post => {
-          return <BlogPostTeaser key={post._id} post={post} />;
+          return <BlogPostCard key={post._id} post={post} />;
         })}
       </div>
     </div>

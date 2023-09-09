@@ -41,6 +41,15 @@ module.exports = {
       maxWidth: {
         container: '75rem',
       },
+      animation: {
+        'scrolling-container': 'scrolling-container 30000ms linear infinite',
+      },
+      keyframes: {
+        'scrolling-container': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
       typography: ({ theme }) => ({
         violet: {
           css: {

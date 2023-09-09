@@ -11,11 +11,10 @@ type LogoProps = {
 };
 
 export const Logo: FC<LogoProps> = props => {
-  const iconSize = props.iconSize ?? 40;
+  const iconSize = props.iconSize ?? 44;
   const iconColor = props.iconColor ?? '#CEAFFA';
 
   const textSize = props.textSize ?? 24;
-  const textColor = props.textColor ?? 'black';
 
   return (
     <div className="flex items-center justify-start gap-3">
@@ -39,7 +38,7 @@ export const Logo: FC<LogoProps> = props => {
       {!props.textHidden && (
         <span
           className="font-accent text-2xl font-bold tracking-wider"
-          style={{ fontSize: textSize, color: textColor }}
+          style={{ fontSize: textSize }}
         >
           Konstantin
         </span>

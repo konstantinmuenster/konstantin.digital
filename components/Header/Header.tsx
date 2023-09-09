@@ -17,7 +17,7 @@ export const Header = () => {
   return (
     <header className="px-container mx-auto flex min-h-[calc(44px+2.5rem)] max-w-container justify-between gap-8 py-5">
       <Link href="/" className="a-reset focus-default rounded-md">
-        <Logo iconRotated textHidden />
+        <Logo textHidden />
       </Link>
       {/* DESKTOP */}
       <div className="hidden md:block">
