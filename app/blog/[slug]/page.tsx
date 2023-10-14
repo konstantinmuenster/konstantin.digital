@@ -91,7 +91,7 @@ const Post = ({ params }: { params: { slug: string } }) => {
             return (
               <Label
                 key={i}
-                color="grey"
+                color="gray"
                 className="select-none transition-all hover:ring-2 hover:ring-violet/50 hover:ring-offset-2 hover:ring-offset-white dark:hover:ring-offset-black"
               >
                 {tag}

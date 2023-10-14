@@ -19,8 +19,8 @@ export const AboutSection = () => {
             coding with a good lo-fi playlist running in the back 🎧
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Label color="grey">5+ years of building web apps</Label>
-            <Label color="grey">educator at techlabs.org</Label>
+            <Label color="gray">5+ years of building web apps</Label>
+            <Label color="gray">educator at techlabs.org</Label>
           </div>
         </div>
         <div className="max-w-[580px] flex-shrink-0 rounded-md">
