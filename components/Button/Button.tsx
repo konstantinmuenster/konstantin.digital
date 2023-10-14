@@ -6,14 +6,14 @@ import { VariantProps, tv } from 'tailwind-variants';
 import { isInternal } from '@/utils/isInternal';
 
 const button = tv({
-  base: 'focus-default inline-block flex-shrink-0 cursor-pointer rounded-full px-[20px] py-[10px] transition-colors',
+  base: 'focus-default inline-block flex-shrink-0 cursor-pointer rounded-full px-[20px] py-[10px] !font-medium transition-colors',
   variants: {
     variant: {
       primary: 'bg-black text-white dark:bg-white dark:text-black',
       secondary: 'bg-purple-500 text-white',
       text: 'group relative rounded-md bg-transparent p-[10px] text-black dark:text-white',
-      label:
-        '!px-4 !py-2 !font-medium hover:bg-black-200 dark:hover:bg-black-800',
+      gray: 'bg-black-200 text-black hover:bg-black-300 dark:bg-black-800 dark:text-white hover:dark:bg-black-700',
+      label: '!px-4 !py-2 hover:bg-black-200 dark:hover:bg-black-800',
     },
     size: {
       sm: 'text-base font-normal',
