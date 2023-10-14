@@ -8,6 +8,10 @@ import {
   makeSource,
 } from 'contentlayer/source-files';
 
+/**
+ * GENERIC TYPES
+ */
+
 const Image = defineNestedType(() => ({
   name: 'Image',
   fields: {
@@ -20,13 +24,19 @@ const Image = defineNestedType(() => ({
 const Externals = defineNestedType(() => ({
   name: 'Externals',
   fields: {
-    medium: { type: 'string' },
+    Medium: { type: 'string' },
+    ProductHunt: { type: 'string' },
+    Website: { type: 'string' },
   },
 }));
 
-const Categories = ['Engineering', 'Product', 'Careers'] as const;
+/**
+ * BLOG POSTS
+ */
 
 const POSTS_DIR_NAME = 'posts';
+
+const Categories = ['Engineering', 'Product', 'Careers'] as const;
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -54,9 +64,58 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
+/**
+ * PROJECTS
+ */
+
+const PROJECTS_DIR_NAME = 'projects';
+
+const Review = defineNestedType(() => ({
+  name: 'Review',
+  fields: {
+    biography: { type: 'string' },
+    summary: { type: 'markdown' },
+    avatar: { type: 'nested', of: Image },
+  },
+}));
+
+export const Project = defineDocumentType(() => ({
+  name: 'Project',
+  filePathPattern: `./${PROJECTS_DIR_NAME}/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+    period: { type: 'string' },
+    subtitle: { type: 'string' },
+    cover: { type: 'nested', of: Image },
+    role: { type: 'string' },
+    space: { type: 'string' },
+    tags: { type: 'list', of: { type: 'string' } },
+    stack: { type: 'list', of: { type: 'string' } },
+    externals: { type: 'nested', of: Externals },
+    background: { type: 'markdown' },
+    carousel: { type: 'list', of: Image },
+    responsibilities: { type: 'list', of: { type: 'markdown' } },
+    achievements: { type: 'list', of: { type: 'markdown' } },
+    highlight: { type: 'markdown' },
+    review: { type: 'nested', of: Review },
+  },
+  computedFields: {
+    slug: {
+      type: 'string',
+      resolve: post => {
+        const n = post._raw.flattenedPath.split(`${PROJECTS_DIR_NAME}/`).pop();
+        const slug = n?.replace(/^(\d{3})-/, '');
+        if (!slug) throw new Error(`Invalid file name: ${name}`);
+        return slug;
+      },
+    },
+  },
+}));
+
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Post],
+  documentTypes: [Post, Project],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
