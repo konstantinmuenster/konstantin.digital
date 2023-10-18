@@ -7,24 +7,30 @@ cover:
   alt: 'Screenshot of Lazy'
 role: 'Founding Engineer'
 space: 'Productivity'
-tags: ['Note-Taking', 'Artifical Intelligence']
-stack: ['Electron', 'TypeScript', 'React', 'Tiptap', 'MUI']
+tags: ['Desktop', 'Docs', 'Artifical Intelligence']
+stack: ['Electron.js', 'TypeScript', 'React.js', 'Tiptap', 'Material UI']
 externals:
   ProductHunt: '<a href="https://www.producthunt.com/posts/lazy-7798f961-d851-4110-bd04-39d767f47a3b?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-lazy&#0045;7798f961&#0045;d851&#0045;4110&#0045;bd04&#0045;39d767f47a3b" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=406328&theme=light&period=weekly" alt="Lazy - Capture&#0032;at&#0032;the&#0032;speed&#0032;of&#0032;thought | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>'
   Website: 'https://lazy.so'
-background: 'hello'
+background: 'Context switching is poison for productivity. When you get that brilliant idea or see something inspiring, you should be able to take smart notes without switching app or tabs. That’s Lazy. One ⌘ shortcut to capture anywhere.'
 carousel:
-  - src: '/images/projects/lazy/lazy-cover.png'
+  - src: '/images/projects/lazy/lazy-launcher.png'
     alt: 'Screenshot of Lazy'
-  - src: '/images/projects/lazy/lazy-cover.png'
+    caption: 'Capture ideas or content whenever you want.'
+  - src: '/images/projects/lazy/lazy-slash.png'
     alt: 'Screenshot of Lazy'
+    caption: 'Distill wisdom from your captured content.'
+  - src: '/images/projects/lazy/lazy-sources.png'
+    alt: 'Screenshot of Lazy'
+    caption: 'Connect the dots with context-aware captures.'
 responsibilities:
-  - 'Designed and implemented the core features of the product, including the editor, the sidebar, the search, and the settings.'
-  - 'Designed and implemented the core features of the product, including the editor, the sidebar, the search, and the settings.'
+  - 'Building a block-based rich text editor with custom extensions'
+  - 'Shaping the editing experience with features like annotations and imports'
+  - 'Helping users and eliciting feedback in Slack community'
 achievements:
-  - 'Designed and implemented the core features of the product, including the editor, the sidebar, the search, and the settings.'
-  - 'Designed and implemented the core features of the product, including the editor, the sidebar, the search, and the settings.'
-highlight: 'hello'
+  - 'Lazy has a state-of-the-art content editing experience that allows you to refine your captured content flexibly and reliably.'
+  - 'Lazy is an app that cares about details. We spent a lot of time getting the UX and technicalities right. The feedback we got was awesome!'
+  - 'The private beta version that launched on Product Hunt won several awards, such as #1 Product of the Week.'
 review:
   biography: 'Ahmed says'
   summary: 'Ahmed says'
@@ -32,3 +38,19 @@ review:
     src: '/images/projects/lazy/lazy-cover.png'
     alt: 'Screenshot of Lazy'
 ---
+
+When I joined Lazy, we were right in the midst of migrating to a new text editing framework.
+
+Since the prior editor wasn’t as performant and extensible as we had hoped, we decided to switch to Tiptap – a relatively new library back then.
+
+After introducing our own block-based content schema, we started implementing numerous extensions.
+
+### Making Highlights in Lazy
+
+A key flow in Lazy is the ability to make highlights and annotations. You can do this either on the content itself (e.g. a Twitter thread opened in your browser) or right inside Lazy. In both scenarios, your captured highlights should be grouped under a “Highlights” block that is connected to the original content.
+
+— ADD VIDEO
+
+The connected original content, which we call “clip”, safely stores all of the highlights and is automatically synced with the Highlights block. So, you can freely add, modify, and delete highlights, and we make sure that both blocks stay in sync.
+
+Implementing this flow was challenging, but it also allowed us to push the boundaries of what we thought was possible. It allowed me to dive deep into how transaction handling works inside ProseMirror, and how we can make sure that such complex and interactive features remain stable over time.

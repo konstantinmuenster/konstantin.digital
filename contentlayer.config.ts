@@ -97,7 +97,6 @@ export const Project = defineDocumentType(() => ({
     carousel: { type: 'list', of: Image },
     responsibilities: { type: 'list', of: { type: 'markdown' } },
     achievements: { type: 'list', of: { type: 'markdown' } },
-    highlight: { type: 'markdown' },
     review: { type: 'nested', of: Review },
   },
   computedFields: {
