@@ -44,39 +44,51 @@ const Project = ({ params }: { params: { slug: string } }) => {
           >
             <ArrowLeft />
           </Link>
-          <h1 className="pt-8 font-accent text-4xl font-medium md:pt-16 md:text-5xl">
-            {project.title}
-          </h1>
-          <span className="block py-5 text-xl">{project.subtitle}</span>
-          <div className="flex flex-wrap items-end justify-between gap-8">
-            <div className="flex flex-shrink-0 flex-wrap items-center gap-2">
-              {project.role && <Label size="lg">{project.role}</Label>}
-              {project.space && (
-                <Label color="gray" size="lg">
-                  {project.space}
-                </Label>
-              )}
-              {project.externals?.Website && (
-                <span className="block px-2 text-sm opacity-50">
-                  Visit{' '}
-                  <a
-                    href={project.externals.Website}
-                    className="a-reset underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {project.externals.Website.substring(8)}
-                  </a>
+          <div className="grid grid-cols-1 items-end gap-6 lg:grid-cols-[2fr_1fr]">
+            <div>
+              <h1 className="pt-8 font-accent text-4xl font-medium md:pt-16 md:text-5xl">
+                {project.title}
+              </h1>
+              <span className="block pb-10 pt-5 text-xl">
+                {project.subtitle}
+              </span>
+              <div className="flex flex-shrink-0 flex-wrap items-center gap-2">
+                {project.role && <Label size="lg">{project.role}</Label>}
+                {project.space && (
+                  <Label color="gray" size="lg">
+                    {project.space}
+                  </Label>
+                )}
+                {project.externals?.Website && (
+                  <span className="block px-2 text-sm opacity-50">
+                    Visit{' '}
+                    <a
+                      href={project.externals.Website}
+                      className="a-reset underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.externals.Website.substring(8)}
+                    </a>
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="flex flex-col items-start justify-end lg:items-end">
+              {project.period && (
+                <span className="block py-2 text-right text-sm font-medium uppercase tracking-wider text-black-500">
+                  {project.period}
                 </span>
               )}
+              {project.externals?.ProductHunt && (
+                <div
+                  className="mb-2 mt-4"
+                  dangerouslySetInnerHTML={{
+                    __html: project.externals.ProductHunt,
+                  }}
+                />
+              )}
             </div>
-            {project.externals?.ProductHunt && (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: project.externals.ProductHunt,
-                }}
-              />
-            )}
           </div>
         </div>
         {project.cover?.src && (
