@@ -18,7 +18,7 @@ export const TaskCard: FC<TaskCardProps> = ({ title, className }) => {
     <div>
       <div
         className={clsx(
-          'select-none rounded-xl bg-black-200 px-8 pb-6 pt-8 ring-inset ring-black-300/80 transition-all hover:ring-2',
+          'select-none rounded-xl bg-black-200 px-8 pb-6 pt-8 ring-inset ring-black-300/80 transition-all hover:ring-2 dark:bg-black-950 dark:ring-black-800',
           className
         )}
       >

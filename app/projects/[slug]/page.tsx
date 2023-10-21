@@ -50,8 +50,12 @@ const Project = ({ params }: { params: { slug: string } }) => {
           <span className="block py-5 text-xl">{project.subtitle}</span>
           <div className="flex flex-wrap items-end justify-between gap-8">
             <div className="flex flex-shrink-0 flex-wrap items-center gap-2">
-              {project.role && <Label>{project.role}</Label>}
-              {project.space && <Label color="gray">{project.space}</Label>}
+              {project.role && <Label size="lg">{project.role}</Label>}
+              {project.space && (
+                <Label color="gray" size="lg">
+                  {project.space}
+                </Label>
+              )}
               {project.externals?.Website && (
                 <span className="block px-2 text-sm opacity-50">
                   Visit{' '}
@@ -83,13 +87,12 @@ const Project = ({ params }: { params: { slug: string } }) => {
               width={1200}
               height={630}
               quality={100}
-              className="rounded-2xl ring-4 ring-mint ring-offset-2 dark:ring-offset-black"
+              className="rounded-2xl ring-4 ring-mint ring-offset-2 dark:ring-mint/80 dark:ring-offset-black"
               priority
             />
             <div
               aria-hidden="true"
-              className="absolute -bottom-2 left-0 -ml-[5%] h-[15%] w-[110%] rounded-md bg-black-50"
-              style={{ boxShadow: '0 -5px 5px -5px rgba(0,0,0,.4)' }}
+              className="absolute -bottom-2 left-0 -ml-[5%] h-[15%] w-[110%] rounded-md bg-black-50 shadow-[0_-5px_5px_-5px_rgba(0,0,0,.4)] dark:bg-black dark:shadow-[0_-5px_5px_-5px_rgba(255,255,255,.1)]"
             />
           </div>
         )}
@@ -111,7 +114,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
                   <Label
                     key={technology}
                     size="lg"
-                    className="select-none border border-violet/50 bg-transparent text-[#777777]"
+                    className="select-none border border-violet/50 bg-transparent text-[#777777] dark:border-violet/30 dark:bg-black dark:text-[#8C8C8C]"
                   >
                     {technology}
                   </Label>
@@ -143,18 +146,18 @@ const Project = ({ params }: { params: { slug: string } }) => {
                   rotation
                 )}
               >
-                <div className="aspect-[16/9] h-full w-full overflow-hidden rounded-xl ring-2 ring-black-300 ring-offset-4 ring-offset-black-100">
+                <div className="aspect-[16/9] h-full w-full overflow-hidden rounded-xl ring-2 ring-black-300 ring-offset-4 ring-offset-black-100 dark:ring-black-950 dark:ring-offset-black">
                   <ImageWithZoom
                     src={image.src}
                     alt={image.alt}
                     width={1600}
                     height={900}
-                    className="bg-black-100"
+                    className="bg-black-100 dark:bg-black-950"
                   />
                 </div>
                 {image.caption?.html && (
                   <div
-                    className="absolute -bottom-8 w-full text-center text-sm text-black-400"
+                    className="absolute -bottom-8 w-full text-center text-sm opacity-50"
                     dangerouslySetInnerHTML={{ __html: image.caption.html }}
                   />
                 )}
