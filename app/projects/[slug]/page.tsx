@@ -1,6 +1,5 @@
 import { type Metadata } from 'next';
 import { ArrowLeft } from 'lucide-react';
-import { useMDXComponent } from 'next-contentlayer/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
@@ -13,6 +12,7 @@ import { ImageWithZoom } from '@/components/Image';
 import { BubbleHeart, BubbleSparkles, BubbleThumbsUp } from '@/components/Icon';
 
 import { TaskCard } from '../_components/TaskCard';
+import { HighlightContent } from '../_components/HighlightContent';
 
 const getProjectBySlug = (slug: string) => {
   const project = allProjects.find(project => project.slug === slug);
@@ -35,7 +35,6 @@ const imageRotations = [
 
 const Project = ({ params }: { params: { slug: string } }) => {
   const project = getProjectBySlug(params.slug);
-  const MDXContent = useMDXComponent(project.body.code);
 
   return (
     <main className="pb-24">
@@ -189,9 +188,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
               <h2 className="mb-5 mt-4 font-accent text-4xl font-medium">
                 Highlight of the Project
               </h2>
-              <div className="prose-custom">
-                <MDXContent />
-              </div>
+              <HighlightContent code={project.body.code} />
             </div>
           )}
           {project.review?.summary?.html && (

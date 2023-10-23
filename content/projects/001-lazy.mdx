@@ -14,29 +14,23 @@ externals:
   Website: 'https://lazy.so'
 background: 'Context switching is poison for productivity. When you get that brilliant idea or see something inspiring, you should be able to take smart notes without switching app or tabs. That’s Lazy. One ⌘ shortcut to capture anywhere.'
 carousel:
-  - src: '/images/projects/lazy/lazy-launcher.png'
-    alt: 'Screenshot of Lazy'
-    caption: 'Capture ideas or content whenever you want.'
-  - src: '/images/projects/lazy/lazy-slash.png'
+  - src: '/images/projects/lazy/lazy-editor.png'
     alt: 'Screenshot of Lazy'
     caption: 'Distill wisdom from your captured content.'
-  - src: '/images/projects/lazy/lazy-sources.png'
+  - src: '/images/projects/lazy/lazy-youtube.png'
+    alt: 'Screenshot of Lazy'
+    caption: 'Capture ideas or content whenever you want.'
+  - src: '/images/projects/lazy/lazy-gallery.png'
     alt: 'Screenshot of Lazy'
     caption: 'Connect the dots with context-aware captures.'
 responsibilities:
   - 'Building a block-based rich text editor with custom extensions'
-  - 'Shaping the editing experience with features like annotations and imports'
+  - 'Shaping the editing experience with features like annotations and content imports'
   - 'Helping users and eliciting feedback in Slack community'
 achievements:
-  - 'Lazy has a state-of-the-art content editing experience that allows you to refine your captured content flexibly and reliably.'
-  - 'Lazy is an app that cares about details. We spent a lot of time getting the UX and technicalities right. The feedback we got was awesome!'
-  - 'The private beta version that launched on Product Hunt won several awards, such as #1 Product of the Week.'
-review:
-  biography: 'Ahmed says'
-  summary: 'Ahmed says'
-  avatar:
-    src: '/images/projects/lazy/lazy-cover.png'
-    alt: 'Screenshot of Lazy'
+  - 'Private beta version that launched on Product Hunt **won several awards**, such as #1 Product of the Week.'
+  - '**Overwhelming feedback from users**, who emphasized the beautiful craft and attention to detail put into Lazy.'
+  - 'An **intuitive approach** to capture and refine whatever content or idea you come across throughout your day.'
 ---
 
 When I joined Lazy, we were right in the midst of migrating to a new text editing framework.
@@ -45,11 +39,15 @@ Since the prior editor wasn’t as performant and extensible as we had hoped, we
 
 After introducing our own block-based content schema, we started implementing numerous extensions.
 
-### Making Highlights in Lazy
+### Annotations in Lazy
 
 A key flow in Lazy is the ability to make highlights and annotations. You can do this either on the content itself (e.g. a Twitter thread opened in your browser) or right inside Lazy. In both scenarios, your captured highlights should be grouped under a “Highlights” block that is connected to the original content.
 
-— ADD VIDEO
+<Video
+  src="/images/projects/lazy/lazy-highlights.mp4"
+  alt="Video of the highlights flow in Lazy"
+  thumbnail="/images/projects/lazy/lazy-highlights-thumbnail.png"
+/>
 
 The connected original content, which we call “clip”, safely stores all of the highlights and is automatically synced with the Highlights block. So, you can freely add, modify, and delete highlights, and we make sure that both blocks stay in sync.
 
