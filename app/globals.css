@@ -10,6 +10,10 @@
   a:not([role='button']):not(.a-reset) {
     @apply border-b border-current font-medium opacity-80 hover:opacity-100 focus-visible:border-violet focus-visible:text-violet focus-visible:outline-none;
   }
+  b,
+  strong {
+    @apply font-semibold;
+  }
 }
 
 @tailwind components;

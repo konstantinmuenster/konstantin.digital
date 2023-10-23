@@ -1,13 +1,16 @@
 import { type Metadata } from 'next';
 import { ArrowLeft } from 'lucide-react';
+import { useMDXComponent } from 'next-contentlayer/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
 
 import { allProjects } from '@/.contentlayer/generated';
 
+import { CTA } from '@/components/CTA';
 import { Label } from '@/components/Label';
 import { ImageWithZoom } from '@/components/Image';
+import { BubbleHeart, BubbleSparkles, BubbleThumbsUp } from '@/components/Icon';
 
 import { TaskCard } from '../_components/TaskCard';
 
@@ -32,6 +35,7 @@ const imageRotations = [
 
 const Project = ({ params }: { params: { slug: string } }) => {
   const project = getProjectBySlug(params.slug);
+  const MDXContent = useMDXComponent(project.body.code);
 
   return (
     <main className="pb-24">
@@ -99,7 +103,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
               width={1200}
               height={630}
               quality={100}
-              className="rounded-2xl ring-4 ring-mint ring-offset-2 dark:ring-mint/80 dark:ring-offset-black"
+              className="rounded-2xl"
               priority
             />
             <div
@@ -126,7 +130,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
                   <Label
                     key={technology}
                     size="lg"
-                    className="select-none border border-violet/50 bg-transparent text-[#777777] dark:border-violet/30 dark:bg-black dark:text-[#8C8C8C]"
+                    className="select-none border border-violet/50 bg-transparent text-[#777777] dark:border-violet/30 dark:bg-black dark:text-[#b8b8b8]"
                   >
                     {technology}
                   </Label>
@@ -158,13 +162,13 @@ const Project = ({ params }: { params: { slug: string } }) => {
                   rotation
                 )}
               >
-                <div className="aspect-[16/9] h-full w-full overflow-hidden rounded-xl ring-2 ring-black-300 ring-offset-4 ring-offset-black-100 dark:ring-black-950 dark:ring-offset-black">
+                <div className="aspect-[16/9] h-full w-full overflow-hidden rounded-xl ring-2 ring-black-300 ring-offset-4 ring-offset-black-100 dark:ring-black-900 dark:ring-offset-black">
                   <ImageWithZoom
                     src={image.src}
                     alt={image.alt}
                     width={1600}
                     height={900}
-                    className="bg-black-100 dark:bg-black-950"
+                    className="bg-black-100 dark:bg-black-900"
                   />
                 </div>
                 {image.caption?.html && (
@@ -178,6 +182,71 @@ const Project = ({ params }: { params: { slug: string } }) => {
           })}
         </div>
       )}
+      <div className="px-container mx-auto grid max-w-6xl grid-cols-1 gap-32 lg:grid-cols-[2fr_1fr]">
+        <div className="order-2 flex flex-col gap-8 lg:order-1">
+          {project.body.raw && (
+            <div>
+              <h2 className="mb-5 mt-4 font-accent text-4xl font-medium">
+                Highlight of the Project
+              </h2>
+              <div className="prose-custom">
+                <MDXContent />
+              </div>
+            </div>
+          )}
+          {project.review?.summary?.html && (
+            <div className="flex flex-col gap-4 rounded-2xl bg-black-100 p-5 ring-2 ring-violet/50 ring-offset-4 transition-all duration-1000 hover:ring-violet/75 dark:bg-black-950 dark:ring-violet/20 dark:ring-offset-black dark:hover:ring-violet/50">
+              <div
+                className="leading-relaxed opacity-75"
+                dangerouslySetInnerHTML={{
+                  __html: project.review.summary.html,
+                }}
+              />
+              <div className="flex items-center gap-3 text-sm">
+                {project.review.avatar?.src && (
+                  <Image
+                    src={project.review.avatar.src}
+                    alt={project.review.avatar.alt}
+                    width={24}
+                    height={24}
+                    className="rounded-full ring-2 ring-black-300 ring-offset-1 ring-offset-black-100 dark:ring-black-900 dark:ring-offset-black"
+                  />
+                )}
+                <span>{project.review.biography}</span>
+              </div>
+            </div>
+          )}
+        </div>
+        {project.achievements?.length && (
+          <aside className="order-1 lg:order-2 lg:pt-16">
+            <Tagline>Outcomes</Tagline>
+            <div className="mt-8 flex flex-row flex-wrap gap-8 lg:mt-10 lg:flex-col lg:gap-10">
+              {project.achievements.map((v, i) => {
+                return (
+                  <div
+                    key={i}
+                    className="relative max-w-[280px] rounded-xl bg-black-200 px-6 py-6 text-lg ring-inset ring-black-300/80 transition-all duration-1000 hover:ring-2 dark:bg-black-900 dark:text-white/95 dark:ring-black-800"
+                  >
+                    {i === 0 && (
+                      <BubbleThumbsUp className="absolute -right-2 -top-2 h-[48px] w-[48px]" />
+                    )}
+                    {i === 1 && (
+                      <BubbleSparkles className="absolute -right-6 top-8 h-[48px] w-[48px]" />
+                    )}
+                    {i === 2 && (
+                      <BubbleHeart className="absolute -right-4 bottom-4 h-[48px] w-[48px]" />
+                    )}
+                    <div dangerouslySetInnerHTML={{ __html: v.html }} />
+                  </div>
+                );
+              })}
+            </div>
+          </aside>
+        )}
+      </div>
+      <div className="px-container mx-auto my-24 max-w-container">
+        <CTA variant="mint" />
+      </div>
     </main>
   );
 };
