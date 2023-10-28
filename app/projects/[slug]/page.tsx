@@ -101,8 +101,8 @@ const Project = ({ params }: { params: { slug: string } }) => {
               alt={project.cover.alt}
               width={1200}
               height={630}
-              quality={100}
-              className="rounded-2xl"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              className="rounded-2xl bg-black-100 dark:bg-black-950"
               priority
             />
             <div
@@ -167,6 +167,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
                     alt={image.alt}
                     width={1600}
                     height={900}
+                    sizes="(max-width: 768px) 100vw, 1600px"
                     className="bg-black-100 dark:bg-black-900"
                   />
                 </div>

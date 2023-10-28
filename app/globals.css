@@ -172,6 +172,14 @@ h5[id] > a > .icon-link:hover:after {
     transition-duration: 0.01ms !important;
   }
 }
+html[style='color-scheme: dark;'] {
+  [data-rmiz-modal-overlay='hidden'] {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  [data-rmiz-modal-overlay='visible'] {
+    background-color: rgba(0, 0, 0, 1);
+  }
+}
 @media (prefers-color-scheme: dark) {
   [data-rmiz-modal-overlay='hidden'] {
     background-color: rgba(0, 0, 0, 0);

@@ -51,8 +51,8 @@ export const ProjectCard: FC<ProjectCardProps> = ({ project, className }) => {
               alt={project.cover.alt}
               width={600}
               height={340}
-              quality={100}
-              className="translate-y-6 -rotate-2 rounded-lg ring-4 ring-mint ring-offset-2 transition-all group-hover:translate-y-4 group-hover:-rotate-1 group-hover:ring-violet dark:ring-offset-black"
+              sizes="(max-width: 768px) 100vw, 600px"
+              className="translate-y-6 -rotate-2 rounded-lg bg-black-50 ring-4 ring-mint ring-offset-2 transition-all group-hover:translate-y-4 group-hover:-rotate-1 group-hover:ring-violet dark:bg-black dark:ring-offset-black"
             />
           )}
         </div>
