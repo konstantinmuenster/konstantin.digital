@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, Fragment } from 'react';
+import { useState, Fragment, useMemo } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { PlayCircleIcon } from 'lucide-react';
 import Image from 'next/image';
@@ -15,15 +15,33 @@ type VideoProps = {
 export const Video = ({ src, alt, thumbnail }: VideoProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <>
-      <div className="not-prose group relative my-16 rounded-xl ring-1 ring-black-300 ring-offset-2 transition-all dark:ring-black-800 dark:ring-offset-black">
+  const VideoPlayer = useMemo(() => {
+    return (
+      <ReactPlayer
+        url={src}
+        width="100%"
+        height="100%"
+        config={{
+          attributes: {
+            muted: true,
+            autoPlay: true,
+            controls: true,
+          },
+        }}
+      />
+    );
+  }, [src]);
+
+  const Thumbnail = useMemo(() => {
+    return (
+      <div className="not-prose group relative rounded-xl ring-1 ring-black-300 ring-offset-2 transition-all dark:ring-black-800 dark:ring-offset-black">
         <Image
           src={thumbnail}
           alt={alt}
-          width={1280}
-          height={720}
-          className="h-full w-full cursor-pointer rounded-xl object-cover"
+          width={720}
+          height={405}
+          sizes="(max-width: 768px) 100vw, 720px"
+          className="h-full w-full cursor-pointer rounded-xl bg-black-100 object-cover dark:bg-black-900"
           onClick={() => setIsOpen(true)}
         />
         <div
@@ -46,6 +64,14 @@ export const Video = ({ src, alt, thumbnail }: VideoProps) => {
           />
         </button>
       </div>
+    );
+  }, [thumbnail, alt]);
+
+  return (
+    <>
+      <div className="my-16 hidden rounded-xl ring-1 ring-black-300 ring-offset-2 dark:ring-black-800 dark:ring-offset-black lg:block">
+        {Thumbnail}
+      </div>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
@@ -65,7 +91,7 @@ export const Video = ({ src, alt, thumbnail }: VideoProps) => {
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="h-full items-center justify-center p-4 text-center lg:p-16">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -75,19 +101,10 @@ export const Video = ({ src, alt, thumbnail }: VideoProps) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all dark:bg-black">
-                  <ReactPlayer
-                    url={src}
-                    width="100%"
-                    height="100%"
-                    config={{
-                      attributes: {
-                        muted: true,
-                        autoPlay: true,
-                        controls: true,
-                      },
-                    }}
-                  />
+                <Dialog.Panel className="w-full transform overflow-hidden rounded-2xl bg-white p-6 text-left shadow-xl transition-all dark:bg-black lg:h-full">
+                  <div className="flex h-full w-full items-center justify-center">
+                    {VideoPlayer}
+                  </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
