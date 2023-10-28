@@ -28,6 +28,7 @@ export const Video = ({ src, alt, caption, thumbnail }: VideoProps) => {
         url={src}
         width="100%"
         height="100%"
+        playsinline
         config={{
           attributes: {
             muted: true,
