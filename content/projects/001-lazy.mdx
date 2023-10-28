@@ -33,15 +33,13 @@ achievements:
   - 'An **intuitive approach** to capture and refine whatever content or idea you come across throughout your day.'
 ---
 
-When I joined Lazy, we were right in the midst of migrating to a new text editing framework.
+When I joined Lazy, we were right in the midst of migrating to a new text editing framework. Since the old editor wasn’t as performant and extensible as we had hoped, we decided to switch to [tiptap.dev](https://tiptap.dev), a relatively new library back then.
 
-Since the prior editor wasn’t as performant and extensible as we had hoped, we decided to switch to Tiptap – a relatively new library back then.
-
-After introducing our own block-based content schema, we started implementing numerous extensions.
+After we introduced our own block-based content schema, we started implementing numerous extensions. Ranging from simple text formatting to more complex features like drag-and-drop and mentions.
 
 ### Annotations in Lazy
 
-A key flow in Lazy is the ability to make highlights and annotations. You can do this either on the content itself (e.g. a Twitter thread opened in your browser) or right inside Lazy. In both scenarios, your captured highlights should be grouped under a “Highlights” block that is connected to the original content.
+A key flow in Lazy is the ability to make highlights and annotations. You can do this either on the content source itself (e.g. a Twitter thread opened in your browser) or right inside Lazy. In both scenarios, your captured highlights should be grouped under a “Highlights” block that is connected to the original content. Let's have a look at how this works 🔻
 
 <Video
   src="/images/projects/lazy/lazy-highlights.mp4"
@@ -49,6 +47,6 @@ A key flow in Lazy is the ability to make highlights and annotations. You can do
   thumbnail="/images/projects/lazy/lazy-highlights-thumbnail.png"
 />
 
-The connected original content, which we call “clip”, safely stores all of the highlights and is automatically synced with the Highlights block. So, you can freely add, modify, and delete highlights, and we make sure that both blocks stay in sync.
+The connected original content, which we call ”Clip”, safely stores all of the highlights and is automatically synced with the Highlights block. So, you can freely add, modify, and delete highlights, and we make sure that both blocks stay in sync.
 
 Implementing this flow was challenging, but it also allowed us to push the boundaries of what we thought was possible. It allowed me to dive deep into how transaction handling works inside ProseMirror, and how we can make sure that such complex and interactive features remain stable over time.

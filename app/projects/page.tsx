@@ -27,8 +27,8 @@ const Projects = () => {
         className="py-16 md:py-32"
         minHeight={false}
         title={<HeroTitle />}
-        description="A collection of freelance and open-source projects. In each, you get some insights into how a project can look like."
-        actions={<HeroActions />}
+        description="A small collection of freelance and open-source projects I worked on. Learn more about how my favorite projects look like."
+        // actions={<HeroActions />}
       />
       <div className="mx-auto mb-24 mt-12 flex max-w-5xl flex-col gap-12">
         {projects.map(project => {

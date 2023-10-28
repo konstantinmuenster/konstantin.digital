@@ -3,6 +3,7 @@
 import { useState, Fragment, useMemo } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { PlayCircleIcon } from 'lucide-react';
+import clsx from 'clsx';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
@@ -15,9 +16,10 @@ type VideoProps = {
   src: string;
   thumbnail: string;
   alt: string;
+  caption?: string;
 };
 
-export const Video = ({ src, alt, thumbnail }: VideoProps) => {
+export const Video = ({ src, alt, caption, thumbnail }: VideoProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const VideoPlayer = useMemo(() => {
@@ -74,9 +76,19 @@ export const Video = ({ src, alt, thumbnail }: VideoProps) => {
 
   return (
     <>
-      <div className="my-12 rounded-xl ring-1 ring-black-300 ring-offset-2 dark:ring-black-800 dark:ring-offset-black">
+      <div
+        className={clsx(
+          'relative rounded-xl ring-1 ring-black-300 ring-offset-2 dark:ring-black-800 dark:ring-offset-black',
+          caption ? 'mb-16 mt-12' : 'my-12'
+        )}
+      >
         <div className="block md:hidden">{VideoPlayer}</div>
         <div className="hidden md:block">{Thumbnail}</div>
+        {caption && (
+          <div className="absolute -bottom-8 w-full text-center text-sm opacity-50">
+            {caption}
+          </div>
+        )}
       </div>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
