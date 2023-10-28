@@ -4,7 +4,12 @@ import { useState, Fragment, useMemo } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { PlayCircleIcon } from 'lucide-react';
 import Image from 'next/image';
-import ReactPlayer from 'react-player/file';
+import dynamic from 'next/dynamic';
+
+const LazyReactPlayer = dynamic(() => import('react-player/file'), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 type VideoProps = {
   src: string;
@@ -17,7 +22,7 @@ export const Video = ({ src, alt, thumbnail }: VideoProps) => {
 
   const VideoPlayer = useMemo(() => {
     return (
-      <ReactPlayer
+      <LazyReactPlayer
         url={src}
         width="100%"
         height="100%"
@@ -69,8 +74,9 @@ export const Video = ({ src, alt, thumbnail }: VideoProps) => {
 
   return (
     <>
-      <div className="my-16 hidden rounded-xl ring-1 ring-black-300 ring-offset-2 dark:ring-black-800 dark:ring-offset-black lg:block">
-        {Thumbnail}
+      <div className="my-12 rounded-xl ring-1 ring-black-300 ring-offset-2 dark:ring-black-800 dark:ring-offset-black">
+        <div className="block md:hidden">{VideoPlayer}</div>
+        <div className="hidden md:block">{Thumbnail}</div>
       </div>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
