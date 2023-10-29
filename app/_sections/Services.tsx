@@ -20,7 +20,7 @@ export const ServicesSection = () => {
           </p>
         </div>
         <div className="my-12 flex items-center justify-center">
-          <Label color="grey" size="lg">
+          <Label color="gray" size="lg">
             How collaborations can look like
           </Label>
         </div>

@@ -46,7 +46,7 @@ export const BlogPostCard: FC<BlogPostCardProps> = ({
             <p className="my-1 text-sm opacity-75">{post.summary}</p>
           )}
           {post.category && (
-            <Label color="grey" className="mt-2 inline-block">
+            <Label color="gray" className="mt-2 inline-block">
               {post.category}
             </Label>
           )}

@@ -1,0 +1,52 @@
+---
+title: Lazy
+subtitle: A capture tool for knowledge.
+period: 'Aug 2020 – today'
+cover:
+  src: '/images/projects/lazy/lazy-cover.png'
+  alt: 'Screenshot of Lazy'
+role: 'Founding Engineer'
+space: 'Productivity'
+tags: ['Desktop', 'Docs', 'Artifical Intelligence']
+stack: ['Electron.js', 'TypeScript', 'React.js', 'Tiptap', 'Material UI']
+externals:
+  ProductHunt: '<a href="https://www.producthunt.com/posts/lazy-7798f961-d851-4110-bd04-39d767f47a3b?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-lazy&#0045;7798f961&#0045;d851&#0045;4110&#0045;bd04&#0045;39d767f47a3b" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=406328&theme=light&period=weekly" alt="Lazy - Capture&#0032;at&#0032;the&#0032;speed&#0032;of&#0032;thought | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>'
+  Website: 'https://lazy.so'
+background: 'Context switching is poison for productivity. When you get that brilliant idea or see something inspiring, you should be able to take smart notes without switching app or tabs. That’s Lazy. One ⌘ shortcut to capture anywhere.'
+carousel:
+  - src: '/images/projects/lazy/lazy-editor.png'
+    alt: 'Screenshot of Lazy'
+    caption: 'Distill wisdom from your captured content.'
+  - src: '/images/projects/lazy/lazy-youtube.png'
+    alt: 'Screenshot of Lazy'
+    caption: 'Capture ideas or content whenever you want.'
+  - src: '/images/projects/lazy/lazy-gallery.png'
+    alt: 'Screenshot of Lazy'
+    caption: 'Connect the dots with context-aware captures.'
+responsibilities:
+  - 'Building a block-based rich text editor with custom extensions'
+  - 'Shaping the editing experience with features like annotations and content imports'
+  - 'Helping users and eliciting feedback in Slack community'
+achievements:
+  - 'Private beta version that launched on Product Hunt **won several awards**, such as #1 Product of the Week.'
+  - '**Overwhelming feedback from users**, who emphasized the beautiful craft and attention to detail put into Lazy.'
+  - 'An **intuitive approach** to capture and refine whatever content or idea you come across throughout your day.'
+---
+
+When I joined Lazy, we were right in the midst of migrating to a new text editing framework. Since the old editor wasn’t as performant and extensible as we had hoped, we decided to switch to [tiptap.dev](https://tiptap.dev), a relatively new library back then.
+
+After we introduced our own block-based content schema, we started implementing numerous extensions. Ranging from simple text formatting to more complex features like drag-and-drop and mentions.
+
+### Annotations in Lazy
+
+A key flow in Lazy is the ability to make highlights and annotations. You can do this either on the content source itself (e.g. a Twitter thread opened in your browser) or right inside Lazy. In both scenarios, your captured highlights should be grouped under a “Highlights” block that is connected to the original content. Let's have a look at how this works 🔻
+
+<Video
+  src="/images/projects/lazy/lazy-highlights.mp4"
+  alt="Video of the highlights flow in Lazy"
+  thumbnail="/images/projects/lazy/lazy-highlights-thumbnail.png"
+/>
+
+The connected original content, which we call ”Clip”, safely stores all of the highlights and is automatically synced with the Highlights block. So, you can freely add, modify, and delete highlights, and we make sure that both blocks stay in sync.
+
+Implementing this flow was challenging, but it also allowed us to push the boundaries of what we thought was possible. It allowed me to dive deep into how transaction handling works inside ProseMirror, and how we can make sure that such complex and interactive features remain stable over time.

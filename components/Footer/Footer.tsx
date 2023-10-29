@@ -78,7 +78,7 @@ export const Footer = () => {
   );
 };
 
-const carbonFootprint = 0.11;
+const carbonFootprint = 0.24;
 const carbonFootprintUrl =
   'https://www.websitecarbon.com/website/konstantin-digital/';
 

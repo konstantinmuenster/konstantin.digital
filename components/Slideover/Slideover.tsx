@@ -56,7 +56,7 @@ export const SlideOver: FC<SlideOverProps> = ({ children, title, Icon }) => {
                   leaveTo="translate-x-full"
                 >
                   <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                    <div className="flex h-full flex-col overflow-y-scroll rounded-l-2xl bg-white py-6 shadow-xl">
+                    <div className="flex h-full flex-col overflow-y-scroll rounded-l-2xl bg-white py-6 shadow-xl dark:bg-black-900">
                       <div className="px-8">
                         <div
                           className={clsx(
@@ -72,7 +72,7 @@ export const SlideOver: FC<SlideOverProps> = ({ children, title, Icon }) => {
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
-                              className="focus-default rounded-md bg-white opacity-50 transition-opacity hover:opacity-100"
+                              className="focus-default rounded-md bg-white opacity-50 transition-opacity hover:opacity-100 dark:bg-black-900"
                               onClick={() => setOpen(false)}
                             >
                               <span className="sr-only">Close panel</span>
