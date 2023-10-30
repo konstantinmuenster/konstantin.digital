@@ -55,7 +55,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
               <span className="block pb-10 pt-5 text-xl">
                 {project.subtitle}
               </span>
-              <div className="flex flex-shrink-0 flex-wrap items-center gap-2">
+              <div className="flex flex-shrink-0 flex-wrap items-center gap-x-2 gap-y-6">
                 {project.role && <Label size="lg">{project.role}</Label>}
                 {project.space && (
                   <Label color="gray" size="lg">

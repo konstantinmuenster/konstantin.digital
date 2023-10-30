@@ -28,6 +28,11 @@ export const Video = ({ src, alt, caption, thumbnail }: VideoProps) => {
         url={src}
         width="100%"
         height="100%"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
         playsinline
         config={{
           attributes: {
@@ -79,8 +84,8 @@ export const Video = ({ src, alt, caption, thumbnail }: VideoProps) => {
     <>
       <div
         className={clsx(
-          'relative rounded-xl ring-1 ring-black-300 ring-offset-2 dark:ring-black-800 dark:ring-offset-black',
-          caption ? 'mb-16 mt-12' : 'my-12'
+          'relative rounded-xl ring-black-300 ring-offset-2 dark:ring-black-800 dark:ring-offset-black md:ring-1',
+          caption ? 'mb-8 mt-6 md:mb-16 md:mt-12' : 'my-6 md:my-12'
         )}
       >
         <div className="block md:hidden">{VideoPlayer}</div>
