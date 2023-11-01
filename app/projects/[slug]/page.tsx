@@ -195,7 +195,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
           {project.review?.summary?.html && (
             <div className="flex flex-col gap-4 rounded-2xl bg-black-100 p-5 ring-2 ring-violet/50 ring-offset-4 transition-all duration-1000 hover:ring-violet/75 dark:bg-black-950 dark:ring-violet/20 dark:ring-offset-black dark:hover:ring-violet/50">
               <div
-                className="leading-relaxed opacity-75"
+                className="prose leading-relaxed text-black/75 dark:prose-invert dark:text-white/75"
                 dangerouslySetInnerHTML={{
                   __html: project.review.summary.html,
                 }}
@@ -207,7 +207,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
                     alt={project.review.avatar.alt}
                     width={24}
                     height={24}
-                    className="rounded-full ring-2 ring-black-300 ring-offset-1 ring-offset-black-100 dark:ring-black-900 dark:ring-offset-black"
+                    className="rounded-full ring-1 ring-black-300 ring-offset-1 ring-offset-black-100 dark:ring-black-900 dark:ring-offset-black"
                   />
                 )}
                 <span>{project.review.biography}</span>
