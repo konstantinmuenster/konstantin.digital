@@ -29,6 +29,7 @@ export const AboutSection = () => {
             alt="Konstantin Münster"
             width={480 * 2}
             height={324 * 2}
+            sizes="(max-width: 768px) 100vw, 760px"
             className="h-full w-full rounded-md object-cover"
           />
           <span className="mt-2 hidden text-center text-xs opacity-50 md:block">
