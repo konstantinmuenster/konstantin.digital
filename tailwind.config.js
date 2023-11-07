@@ -19,7 +19,7 @@ module.exports = {
       sun: '#F9DF78',
       twitter: '#1D9BF0',
       black: {
-        DEFAULT: '#000000',
+        DEFAULT: '#121212',
         50: '#fafaf9',
         100: '#f5f5f4',
         200: '#f0eeee',
