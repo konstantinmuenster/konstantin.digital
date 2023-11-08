@@ -43,7 +43,10 @@ const deriveProjectFromTitle = (
   if (title.toLowerCase().includes('text editor'))
     return { name: 'Text Editor', color: 'sun' };
 
-  if (title.toLowerCase().includes('user'))
+  if (
+    title.toLowerCase().includes('user') ||
+    title.toLowerCase().includes('designed')
+  )
     return { name: 'Product', color: 'violet' };
 
   return { name: 'Frontend', color: 'mint' };

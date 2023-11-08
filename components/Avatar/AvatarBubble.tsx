@@ -32,6 +32,8 @@ export const AvatarBubble: FC<AvatarBubbleProps> = ({ className }) => {
               src={Avatar}
               alt="Konstantin Münster"
               className="h-32 w-32 rounded-full border-2 border-white"
+              sizes="256px"
+              priority
             />
           </div>
         </div>
