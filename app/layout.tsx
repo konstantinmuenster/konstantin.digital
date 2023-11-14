@@ -69,7 +69,6 @@ export const metadata: Metadata = {
     'MVP',
     'Startups',
   ],
-  themeColor: '#CEAFFA',
   viewport: { width: 'device-width', initialScale: 1 },
   alternates: {
     canonical: 'https://konstantin.digital',
