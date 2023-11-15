@@ -149,7 +149,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
           </div>
         )}
       </div>
-      {project.carousel?.length && (
+      {project.carousel?.length ? (
         <div className="px-container mx-auto my-16 grid max-w-[2000px] grid-cols-1 gap-20 overflow-hidden py-8 md:my-32 md:grid-cols-2 xl:grid-cols-3 xl:gap-12">
           {project.carousel.map((image, index) => {
             const rotation = imageRotations[index % imageRotations.length];
@@ -181,6 +181,8 @@ const Project = ({ params }: { params: { slug: string } }) => {
             );
           })}
         </div>
+      ) : (
+        <div className="px-container mx-auto my-8 py-8 md:my-16" />
       )}
       <div className="px-container mx-auto grid max-w-6xl grid-cols-1 gap-32 lg:grid-cols-[2fr_1fr]">
         <div className="order-2 flex flex-col gap-8 lg:order-1">

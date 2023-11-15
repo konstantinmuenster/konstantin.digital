@@ -28,8 +28,14 @@ export const TaskCard: FC<TaskCardProps> = ({ title, className }) => {
         />
         <div className="mt-4 flex items-center gap-4">
           <Avatar size={28} />
-          <div>
-            <Label color={project.color}>{project.name}</Label>
+          <div className="flex gap-2">
+            {project.map((p, i) => {
+              return (
+                <Label key={i} color={p.color}>
+                  {p.name}
+                </Label>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -39,15 +45,22 @@ export const TaskCard: FC<TaskCardProps> = ({ title, className }) => {
 
 const deriveProjectFromTitle = (
   title: string
-): { name: string; color: 'sun' | 'mint' | 'gray' | 'violet' } => {
+): { name: string; color: 'sun' | 'mint' | 'gray' | 'violet' }[] => {
   if (title.toLowerCase().includes('text editor'))
-    return { name: 'Text Editor', color: 'sun' };
+    return [{ name: 'Text Editor', color: 'sun' }];
 
   if (
     title.toLowerCase().includes('user') ||
-    title.toLowerCase().includes('designed')
+    title.toLowerCase().includes('designed') ||
+    title.toLowerCase().includes('consult')
   )
-    return { name: 'Product', color: 'violet' };
+    return [{ name: 'Product', color: 'violet' }];
 
-  return { name: 'Frontend', color: 'mint' };
+  if (title.toLowerCase().includes('initial product'))
+    return [
+      { name: 'Frontend', color: 'mint' },
+      { name: 'Backend', color: 'sun' },
+    ];
+
+  return [{ name: 'Frontend', color: 'mint' }];
 };
