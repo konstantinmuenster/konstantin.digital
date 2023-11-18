@@ -55,10 +55,17 @@ const Project = ({ params }: { params: { slug: string } }) => {
               <span className="block pb-10 pt-5 text-xl">
                 {project.subtitle}
               </span>
-              <div className="flex flex-shrink-0 flex-wrap items-center gap-x-2 gap-y-6">
-                {project.role && <Label size="lg">{project.role}</Label>}
+              <div className="flex flex-shrink-0 flex-wrap items-center gap-x-2 gap-y-4">
+                {project.role && (
+                  <Label className="px-[10px] py-[5px] text-sm md:px-[16px] md:py-[8px] md:text-base">
+                    {project.role}
+                  </Label>
+                )}
                 {project.space && (
-                  <Label color="gray" size="lg">
+                  <Label
+                    color="gray"
+                    className="px-[10px] py-[5px] text-sm md:px-[16px] md:py-[8px] md:text-base"
+                  >
                     {project.space}
                   </Label>
                 )}
