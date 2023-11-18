@@ -41,8 +41,12 @@ const Projects = () => {
                 {project.name}
               </h2>
               <div className="my-6 flex flex-col gap-8 md:my-12">
-                {project.items.map(project => (
-                  <ProjectCard key={project._id} project={project} />
+                {project.items.map((project, i) => (
+                  <ProjectCard
+                    key={project._id}
+                    project={project}
+                    priority={i === 0}
+                  />
                 ))}
               </div>
             </div>
