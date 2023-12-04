@@ -282,4 +282,6 @@ export const generateMetadata = (props: GenerateMetadataParams): Metadata => {
   };
 };
 
+export const runtime = 'nodejs';
+
 export default Project;
