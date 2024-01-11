@@ -19,4 +19,4 @@ export const socials = [
 ];
 
 export const FreshEyesAuditSchedulingLink =
-  'https://cal.com/kmuenster/fresh-eyes-audit';
+  'https://cal.com/konstantinmuenster/fresh-eyes-audit';
