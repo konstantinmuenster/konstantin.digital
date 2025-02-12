@@ -11,6 +11,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
 import { Providers } from './providers';
+import Script from 'next/script';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -40,11 +41,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <Footer />
           </div>
         </Providers>
-        <script
-          type="module"
-          defer
-          src="https://tc-assets.onrender.com/script.js"
-        ></script>
+        <Script src="https://tc-assets.onrender.com/script.js" />
       </body>
     </html>
   );
