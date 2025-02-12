@@ -40,6 +40,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <Footer />
           </div>
         </Providers>
+        <script
+          type="module"
+          defer
+          src="https://tc-assets.onrender.com/script.js"
+        ></script>
       </body>
     </html>
   );
