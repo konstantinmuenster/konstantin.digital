@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
 
-const Transparency = () => {
-  return (
-    <main className="px-container prose-custom mx-auto !max-w-container pb-24 pt-12">
-      <h1>Transparency</h1>
+export const metadata: Metadata = {
+  title: 'Transparency — Konstantin Ruge',
+  robots: { index: false, follow: false },
+};
+
+const Transparency = () => (
+  <main className="pt-16 pb-8">
+    <h1 className="text-2xl font-medium">Transparency</h1>
+    <div className="mt-8 space-y-6 text-neutral-600">
       <p>
-        Your privacy is important to me. It is my policy to respect your privacy
-        regarding any information I may collect from you across my website,{' '}
-        konstantin.digital.
+        Your privacy is important to me. It is my policy to respect your
+        privacy regarding any information I may collect from you across my
+        website, konstantin.digital.
       </p>
       <p>
         I only ask for personal information when I truly need it to provide a
@@ -23,46 +28,29 @@ const Transparency = () => {
         except when required to by law.
       </p>
       <p>
-        I use{' '}
-        <a href="https://plausible.io/" rel="noopener noreferrer">
-          plausible.io
-        </a>{' '}
-        - a privacy-friendly and cookie-less analytics solution - for tracking.
-        All the site measurement is carried out absolutely anonymously. Cookies
-        are not set and no personal data is collected. This helps me aggregating
-        some useful data for improving the site while remaining your privacy.
+        This website does not use cookies and does not collect any analytics
+        or tracking data.
       </p>
       <p>
         My website may link to external sites that are not operated by me.
-        Please be aware that I have no control over the content and practices of
-        these sites, and cannot accept responsibility or liability for their
-        respective privacy policies.
+        Please be aware that I have no control over the content and practices
+        of these sites, and cannot accept responsibility or liability for
+        their respective privacy policies.
       </p>
       <p>
         You are free to refuse my request for your personal information, with
-        the understanding that I may be unable to provide you with some of your
-        desired services.
+        the understanding that I may be unable to provide you with some of
+        your desired services.
       </p>
       <p>
         Your continued use of my website will be regarded as acceptance of my
         practices around privacy and personal information. If you have any
         questions about how I handle user data and personal information, feel
-        free to contact me. This policy is effective as of 22 September 2019. It
-        has been generated with the help of GetTerms.io
+        free to contact me. This policy is effective as of 22 September 2019.
+        It has been generated with the help of GetTerms.io
       </p>
-    </main>
-  );
-};
-
-/** EXPORTS */
-
-export const metadata: Metadata = {
-  title: 'Transparency',
-  description: undefined,
-  robots: {
-    follow: false,
-    index: false,
-  },
-};
+    </div>
+  </main>
+);
 
 export default Transparency;
