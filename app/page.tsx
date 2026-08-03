@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 
 import Image from 'next/image';
 
+import { CalEmbed } from '@/components/CalEmbed';
 import { faq } from '@/content/faq';
 import { products, studio } from '@/content/projects';
 
@@ -256,6 +257,15 @@ const Home = () => (
           </div>
         ))}
       </dl>
+    </section>
+
+    <section className="mt-24">
+      <div
+        className="reveal h-[640px] sm:h-[720px] md:-mx-8 lg:-mx-16 xl:-mx-24"
+        style={stagger(products.length + 9 + faq.length)}
+      >
+        <CalEmbed />
+      </div>
     </section>
   </main>
 );
