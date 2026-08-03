@@ -7,7 +7,7 @@ export const faq: FaqItem[] = [
   {
     question: 'What do you do?',
     answer:
-      'I build products from 0 to 1 as a product-minded CTO and engineer. In the early days I\'m your technical partner: picking an architecture you won\'t regret, building the first real version, and being in the code while we figure out what the product wants to be.',
+      'I build products from 0 to 1 as a product-minded CTO and engineer. In the early days I\'m your technical partner: picking an architecture you won\'t regret, building the first product version, and being in the code while we figure out what the product wants to be.',
   },
   {
     question: 'What does a Fractional CTO do?',
@@ -27,11 +27,11 @@ export const faq: FaqItem[] = [
   {
     question: 'Where are you based?',
     answer:
-      'Near Hamburg, Germany. I work remotely with teams across Europe, and I like coming by in person for a kickoff — a first week face to face saves a lot of Slack later.',
+      'Near Hamburg, Germany. I work remotely with teams across Europe, and I like coming by in person for a kickoff or team event.',
   },
   {
     question: 'How do engagements work?',
     answer:
-      'Ongoing part-time or scoped to a project, depending on what the product needs. No fixed packages. Send me a short email at hey@konstantin.digital telling me what you\'re building and what\'s in the way, and we\'ll take it from there on a call.',
+      'Ongoing part-time or scoped to a project, depending on what the product needs. Send me a short email at hey@konstantin.digital telling me what you\'re building and what\'s in the way, and we\'ll take it from there on a call.',
   },
 ];
