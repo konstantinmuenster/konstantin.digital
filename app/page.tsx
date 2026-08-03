@@ -33,9 +33,9 @@ const jsonLd = {
       '@id': 'https://konstantin.digital/#person',
       name: 'Konstantin Ruge',
       image: 'https://konstantin.digital/konstantin-ruge.jpg',
-      jobTitle: 'Fractional CTO & Product Engineer',
+      jobTitle: 'Fractional CTO & AI Product Engineer',
       description:
-        'Fractional CTO and Freelance Product Engineer helping startups build and ship product.',
+        'Fractional CTO and Freelance AI Product Engineer helping startups build and ship product.',
       url: 'https://konstantin.digital',
       email: 'mailto:hey@konstantin.digital',
       address: {
@@ -61,12 +61,13 @@ const jsonLd = {
         'TypeScript',
         'React',
         'Next.js',
+        'AI'
       ],
     },
     {
       '@type': 'ProfessionalService',
       '@id': 'https://konstantin.digital/#service',
-      name: 'Konstantin Ruge — Fractional CTO & Product Engineering',
+      name: 'Konstantin Ruge — Fractional CTO & AI Product Engineering',
       url: 'https://konstantin.digital',
       email: 'mailto:hey@konstantin.digital',
       founder: { '@id': 'https://konstantin.digital/#person' },
@@ -98,7 +99,7 @@ const Home = () => (
 
     <section className="reveal pt-16 sm:pt-24" style={stagger(0)}>
       <h1 className="sr-only">
-        Konstantin Ruge — Fractional CTO & Product Engineer
+        Konstantin Ruge — Fractional CTO & AI Product Engineer
       </h1>
       <Image
         src="/konstantin-ruge.jpg"
