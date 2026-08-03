@@ -16,13 +16,6 @@ export const studio: Project = {
 
 export const products: Project[] = [
   {
-    name: 'Maya',
-    role: 'Fractional CTO & AI Product Engineer',
-    years: '2026–Today',
-    url: 'https://myprotectify.org/',
-    logo: '/logos/maya.webp',
-  },
-  {
     name: 'Sevenflow',
     role: 'Fractional CTO & Product Engineer',
     years: '2026–Today',
