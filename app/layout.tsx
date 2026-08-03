@@ -63,7 +63,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
                 Imprint
               </Link>
               <a
-                href="https://www.linkedin.com/in/konstantinmuenster/"
+                href="https://www.linkedin.com/in/konstantinruge/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-ink"
@@ -71,7 +71,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
                 LinkedIn
               </a>
               <a
-                href="https://github.com/konstantinmuenster"
+                href="https://github.com/konstantinruge"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-ink"
