@@ -49,8 +49,8 @@ const jsonLd = {
         url: 'https://cobuild.digital',
       },
       sameAs: [
-        'https://www.linkedin.com/in/konstantinmuenster/',
-        'https://github.com/konstantinmuenster',
+        'https://www.linkedin.com/in/konstantinruge/',
+        'https://github.com/konstantinruge',
         'https://cobuild.digital',
       ],
       knowsAbout: [
@@ -144,7 +144,7 @@ const Home = () => (
           Hamburg, Germany
         </span>
         <a
-          href="https://www.linkedin.com/in/konstantinmuenster/"
+          href="https://www.linkedin.com/in/konstantinruge/"
           target="_blank"
           rel="noopener noreferrer"
           className="transition-colors hover:text-ink"
@@ -152,7 +152,7 @@ const Home = () => (
           LinkedIn
         </a>
         <a
-          href="https://github.com/konstantinmuenster"
+          href="https://github.com/konstantinruge"
           target="_blank"
           rel="noopener noreferrer"
           className="transition-colors hover:text-ink"
