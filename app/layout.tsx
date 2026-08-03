@@ -18,21 +18,21 @@ const uxum = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://konstantin.digital'),
-  title: 'Konstantin Ruge — Fractional CTO & Product Engineer',
+  title: 'Konstantin Ruge — Fractional CTO & AI Product Engineer',
   description:
-    'Konstantin Ruge is a Fractional CTO and Freelance Product Engineer based in Hamburg, Germany. He helps startups build and ship product — and runs cobuild, a product studio for SaaS founders.',
+    'Konstantin Ruge is a Fractional CTO and Freelance AI Product Engineer based in Hamburg, Germany. He helps startups build and ship product — and runs cobuild, a product studio for SaaS founders.',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     url: 'https://konstantin.digital',
     siteName: 'Konstantin Ruge',
-    title: 'Konstantin Ruge — Fractional CTO & Product Engineer',
+    title: 'Konstantin Ruge — Fractional CTO & AI Product Engineer',
     description:
-      'Fractional CTO & Freelance Product Engineer based in Hamburg, Germany.',
+      'Fractional CTO & Freelance AI Product Engineer based in Hamburg, Germany.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Konstantin Ruge — Fractional CTO & Product Engineer',
+    title: 'Konstantin Ruge — Fractional CTO & AI Product Engineer',
   },
 };
 
