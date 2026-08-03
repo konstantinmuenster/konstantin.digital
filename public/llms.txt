@@ -1,0 +1,32 @@
+# Konstantin Ruge
+
+> Konstantin Ruge is a Fractional CTO & Freelance AI Product Engineer based in Hamburg, Germany. He helps early-stage startups build and ship product — from the first line of code to leading engineering. He runs cobuild (https://cobuild.digital), a product studio for SaaS founders.
+
+## Services
+
+- Fractional CTO: part-time technical leadership for startups — product architecture, engineering hiring, roadmap decisions, hands-on code.
+- Freelance AI product engineering: TypeScript, React, Next.js.
+- MVP development for early-stage startups.
+- Larger product builds run through his product studio, cobuild GmbH (Hamburg).
+
+He works remotely with startups across Europe. Engagements are ongoing part-time or project-based.
+
+## Work
+
+- Maya (https://myprotectify.org/) — Fractional CTO & Product Engineer, 2026–today
+- Sevenflow (https://sevenflow.de/) — Fractional CTO & Product Engineer, 2026–today
+- cobuild (https://cobuild.digital/) — Managing Director, 2025–today
+- Tuuul (https://tuuul.de/) — Fractional CTO & Product Engineer, 2024–today
+- medmingle (https://medmingle.de/) — Fractional CTO & Product Engineer, 2024–today
+- Akindi (https://akindi.com/) — Product Engineer, 2023–2025
+- vykee (https://vykee.co/) — Product Engineer, 2023–2024
+- dskrpt (https://dskrpt.de/) — Product Engineer, 2023–2024
+- Lazy (https://lazy.so/) — AI Product Engineer, 2021–2024
+
+## Contact
+
+- Email: hey@konstantin.digital
+- Website: https://konstantin.digital
+- LinkedIn: https://www.linkedin.com/in/konstantinruge/
+- GitHub: https://github.com/konstantinruge
+- Studio: https://cobuild.digital

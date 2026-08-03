@@ -1,115 +1,89 @@
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import Link from 'next/link';
 
-import PlausibleAnalytics from 'next-plausible';
+import { Glyph } from '@/components/Glyph';
 
 import './globals.css';
 
-import { getFontConfig } from '@/fonts/fonts.config';
-const { accent, sans } = getFontConfig();
-
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-
-import { Providers } from './providers';
-
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <html
-      lang="en"
-      className={`${accent.variable} ${sans.variable}`}
-      suppressHydrationWarning
-    >
-      <head>
-        <PlausibleAnalytics domain="konstantin.digital" />
-        {/* <meta name="og:image" /> is generated. */}
-        <meta property="og:image:alt" content="Konstantin Münster" />
-        {/* <meta name="twitter:image" /> is generated. */}
-        <meta property="og:image:alt" content="Konstantin Münster" />
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="konstantin.digital – Blog"
-          href="/rss.xml"
-        />
-      </head>
-      <body>
-        <Providers>
-          <div className="min-h-screen" data-page-root>
-            <Header />
-            {children}
-            <Footer />
-          </div>
-        </Providers>
-      </body>
-    </html>
-  );
-};
-
-/**
- * Exports
- */
+const uxum = localFont({
+  src: [
+    { path: '../fonts/UxumGrotesque-Regular.woff2', weight: '400' },
+    { path: '../fonts/UxumGrotesque-Medium.woff2', weight: '500' },
+    { path: '../fonts/UxumGrotesque-Bold.woff2', weight: '700' },
+  ],
+  variable: '--font-uxum',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://konstantin.digital'),
-  authors: { name: 'Konstantin Münster' },
-  creator: 'Konstantin Münster',
-  publisher: 'Konstantin Münster',
-  title: {
-    template: '%s | Konstantin Münster',
-    default: 'Konstantin Münster – Product Engineer',
-  },
+  title: 'Konstantin Ruge — Fractional CTO & AI Product Engineer',
   description:
-    'Turn your product’s pain into production-ready features that unlock opportunities. For startups and scale-ups.',
-  keywords: [
-    'Web Development',
-    'Freelancer',
-    'Product Engineer',
-    'Product Development',
-    'Product Management',
-    'MVP',
-    'Startups',
-  ],
-  viewport: { width: 'device-width', initialScale: 1 },
-  alternates: {
-    canonical: 'https://konstantin.digital',
-    types: {
-      'application/rss+xml': '/rss.xml',
-    },
+    'Konstantin Ruge is a Fractional CTO and Freelance AI Product Engineer based in Hamburg, Germany. He helps startups build and ship product — and runs cobuild, a product studio for SaaS founders.',
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    url: 'https://konstantin.digital',
+    siteName: 'Konstantin Ruge',
+    title: 'Konstantin Ruge — Fractional CTO & AI Product Engineer',
+    description:
+      'Fractional CTO & Freelance AI Product Engineer based in Hamburg, Germany.',
   },
-  manifest: '/manifest.json',
   twitter: {
     card: 'summary_large_image',
-    site: '@kmuenster',
-    creator: '@kmuenster',
-    title: 'Konstantin Münster – Product Engineer',
-    description:
-      'Turn your product’s pain into production-ready features that unlock opportunities. For startups and scale-ups.',
-  },
-  openGraph: {
-    type: 'profile',
-    firstName: 'Konstantin',
-    lastName: 'Münster',
-    username: 'kmuenster',
-    gender: 'he/him',
-    emails: ['hey@konstantin.digital'],
-    url: 'https://konstantin.digital',
-    siteName: 'Konstantin Münster',
-    title: 'Konstantin Münster – Product Engineer',
-    description:
-      'Turn your product’s pain into production-ready features that unlock opportunities. For startups and scale-ups.',
-    countryName: 'Germany',
-    locale: 'en_US',
-  },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: 'black-translucent',
-    title: 'Konstantin Münster',
-  },
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
+    title: 'Konstantin Ruge — Fractional CTO & AI Product Engineer',
   },
 };
+
+const RootLayout = ({ children }: { children: React.ReactNode }) => (
+  <html lang="en" className={uxum.variable}>
+    <body className="bg-white font-sans text-ink">
+      <div className="mx-auto flex min-h-svh w-full max-w-2xl flex-col px-6">
+        <header className="flex items-center justify-between py-10">
+          <Link href="/" aria-label="Konstantin Ruge — home">
+            <Glyph size={28} />
+          </Link>
+          <a
+            href="mailto:hey@konstantin.digital"
+            className="text-sm text-neutral-500 transition-colors hover:text-ink"
+          >
+            hey@konstantin.digital
+          </a>
+        </header>
+        <div className="flex-1">{children}</div>
+        <footer className="mt-24 border-t border-neutral-200 py-10">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3 text-sm text-neutral-500">
+            <p>© {new Date().getFullYear()} Konstantin Ruge</p>
+            <nav className="flex gap-5">
+              <Link href="/transparency" className="transition-colors hover:text-ink">
+                Transparency
+              </Link>
+              <Link href="/imprint" className="transition-colors hover:text-ink">
+                Imprint
+              </Link>
+              <a
+                href="https://www.linkedin.com/in/konstantinruge/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-ink"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/konstantinruge"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-ink"
+              >
+                GitHub
+              </a>
+            </nav>
+          </div>
+        </footer>
+      </div>
+    </body>
+  </html>
+);
 
 export default RootLayout;
